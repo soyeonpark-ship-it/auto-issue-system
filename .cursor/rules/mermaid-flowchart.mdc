@@ -1,0 +1,271 @@
+---
+description: Mermaid flowchart 작성 시 이모지 금지, 공식 문법 준수, 온라인/오프라인 구분, swimlane에 팀명-시스템명 포함 규칙
+globs:
+  - "**/*.md"
+  - "**/*.mmd"
+alwaysApply: false
+---
+
+# Mermaid Flowchart 작성 규칙
+
+## 필수 준수 사항
+
+### 1. 이모지 절대 사용 금지
+- 모든 다이어그램에서 이모지를 절대 사용하지 않습니다
+- 노드 레이블, 엣지 레이블, 서브그래프 제목 등 모든 텍스트에서 이모지 금지
+- 텍스트만으로 명확하게 표현합니다
+
+### 2. Mermaid 공식 문법 100% 준수
+- 공식 문서(https://mermaid.js.org/syntax/flowchart.html)의 문법을 정확히 따릅니다
+- 비표준 문법이나 실험적 기능은 사용하지 않습니다
+- 검증된 문법만 사용합니다
+
+### 3. 온라인/오프라인 작업 명확 구분
+- **온라인 작업**: 실시간으로 처리되는 작업 (API 호출, 사용자 요청 처리, 동기 처리 등)
+- **오프라인 작업**: 배치 처리, 스케줄 작업, 비동기 처리, 백그라운드 작업 등
+- 각 노드에 반드시 "온라인:" 또는 "오프라인:" 접두사를 명시합니다
+- 스타일을 통해 시각적으로 명확하게 구분합니다:
+  - 온라인: 녹색 계열 (fill:#90EE90, stroke:#2E8B57)
+  - 오프라인: 파란색 계열 (fill:#ADD8E6, stroke:#4682B4)
+
+### 4. Swimlane 구성 필수
+- 각 swimlane에는 반드시 "팀명 - 시스템명" 형식으로 표기합니다
+- 예시: "프론트엔드팀 - 주문 UI 시스템", "백엔드팀 - 결제 처리 시스템"
+- subgraph를 사용하여 swimlane을 구현합니다
+- direction TB (Top-Bottom)를 기본으로 사용합니다
+
+## 표준 템플릿
+
+flowchart를 작성할 때는 항상 다음 템플릿을 기반으로 작성합니다:
+
+```mermaid
+flowchart TD
+    %% Swimlane 1: 팀명 - 시스템명
+    subgraph Team1["팀명1 - 시스템명1"]
+        direction TB
+        A1[온라인: 프로세스 설명]:::online
+        A2[오프라인: 프로세스 설명]:::offline
+        A3[온라인: 프로세스 설명]:::online
+        
+        A1 --> A2
+        A2 --> A3
+    end
+    
+    %% Swimlane 2: 팀명 - 시스템명
+    subgraph Team2["팀명2 - 시스템명2"]
+        direction TB
+        B1[오프라인: 프로세스 설명]:::offline
+        B2[온라인: 프로세스 설명]:::online
+        
+        B1 --> B2
+    end
+    
+    %% Swimlane 간 연결
+    A3 --> B1
+    
+    %% 스타일 정의 (필수)
+    classDef online fill:#90EE90,stroke:#2E8B57,stroke-width:3px,color:#000
+    classDef offline fill:#ADD8E6,stroke:#4682B4,stroke-width:3px,color:#000
+```
+
+## 노드 타입 및 문법
+
+### 기본 노드 형태
+- `[텍스트]` - 사각형 (기본, 일반 프로세스)
+- `([텍스트])` - 둥근 사각형 (시작/종료)
+- `[(텍스트)]` - 원통형 (데이터베이스)
+- `{{텍스트}}` - 육각형 (준비/설정)
+- `{텍스트}` - 마름모 (조건/판단)
+- `[/텍스트/]` - 평행사변형 (입력/출력)
+
+### 노드 명명 규칙
+- 노드 ID는 영문과 숫자로 구성 (예: A1, B2, C3, Frontend1)
+- 노드 레이블은 한글로 명확하게 작성
+- 반드시 "온라인:" 또는 "오프라인:" 접두사 포함
+- 예시: `A1[온라인: 사용자 요청 접수]:::online`
+
+## 연결선 (Edge) 문법
+
+### 기본 연결
+- `-->` - 화살표 (일반 흐름)
+- `---` - 선 (연관 관계)
+- `-.->` - 점선 화살표 (선택적 흐름)
+- `==>` - 굵은 화살표 (중요 흐름)
+
+### 레이블이 있는 연결
+- `-->|레이블|` - 레이블이 있는 화살표
+- `---|레이블|` - 레이블이 있는 선
+- 예시: `A1 -->|성공| A2` 또는 `A1 -->|실패| E1`
+
+## 스타일 규칙 (필수)
+
+모든 flowchart에는 반드시 다음 스타일 정의를 포함해야 합니다:
+
+### 온라인 작업 스타일
+```
+classDef online fill:#90EE90,stroke:#2E8B57,stroke-width:3px,color:#000
+```
+
+### 오프라인 작업 스타일
+```
+classDef offline fill:#ADD8E6,stroke:#4682B4,stroke-width:3px,color:#000
+```
+
+### 에러/예외 처리 스타일 (선택적)
+```
+classDef error fill:#FFB6C1,stroke:#DC143C,stroke-width:3px,color:#000
+```
+
+### 스타일 적용 방법
+- 노드 정의 시 `:::className` 문법 사용
+- 예시: `A1[온라인: 프로세스]:::online`
+
+## 주석 작성 규칙
+
+- `%%` 로 시작하는 주석을 사용합니다
+- 각 swimlane 시작 전에 주석으로 설명을 추가합니다
+- 복잡한 로직에는 주석으로 설명을 보충합니다
+- 예시: `%% 프론트엔드팀 - 주문 UI 시스템`
+
+## 파일 구조 및 저장
+
+### Mermaid 파일 저장
+- `.mmd` 확장자 사용
+- 파일명은 `시스템명_프로세스명.mmd` 형식
+- 예: `주문시스템_결제프로세스.mmd`, `배송시스템_배송추적.mmd`
+
+### Markdown 내 포함
+```markdown
+# 프로세스 설명
+
+다음은 시스템 플로우차트입니다:
+
+\`\`\`mermaid
+flowchart TD
+    ...
+\`\`\`
+```
+
+## 검증 체크리스트
+
+flowchart 작성 후 반드시 다음 항목을 확인합니다:
+
+- [ ] 이모지가 사용되지 않았는가?
+- [ ] Mermaid 공식 문법을 100% 준수했는가?
+- [ ] 모든 노드에 "온라인:" 또는 "오프라인:" 접두사가 명시되었는가?
+- [ ] 각 swimlane에 "팀명 - 시스템명" 형식이 포함되었는가?
+- [ ] classDef를 사용하여 online/offline 스타일이 정의되었는가?
+- [ ] 모든 노드에 :::online 또는 :::offline 클래스가 적용되었는가?
+- [ ] 노드 간 연결이 논리적으로 올바른가?
+- [ ] 주석이 적절히 작성되었는가?
+
+## 실제 예제
+
+### 예제 1: 주문 처리 시스템
+
+```mermaid
+flowchart TD
+    %% 프론트엔드팀 - 주문 UI 시스템
+    subgraph Frontend["프론트엔드팀 - 주문 UI 시스템"]
+        direction TB
+        F1[온라인: 주문 요청 접수]:::online
+        F2[온라인: 입력 데이터 검증]:::online
+        F3[온라인: 주문 API 호출]:::online
+        
+        F1 --> F2
+        F2 --> F3
+    end
+    
+    %% 백엔드팀 - 주문 처리 시스템
+    subgraph Backend["백엔드팀 - 주문 처리 시스템"]
+        direction TB
+        B1[온라인: 주문 데이터 수신]:::online
+        B2[온라인: 재고 확인]:::online
+        B3[온라인: 결제 처리]:::online
+        B4[오프라인: 주문 확정 메일 발송]:::offline
+        
+        B1 --> B2
+        B2 --> B3
+        B3 --> B4
+    end
+    
+    %% 물류팀 - 배송 관리 시스템
+    subgraph Logistics["물류팀 - 배송 관리 시스템"]
+        direction TB
+        L1[오프라인: 배송 정보 수집]:::offline
+        L2[오프라인: 배송 스케줄링]:::offline
+        L3[온라인: 배송 상태 업데이트]:::online
+        
+        L1 --> L2
+        L2 --> L3
+    end
+    
+    %% 시스템 간 연결
+    F3 --> B1
+    B4 --> L1
+    
+    %% 스타일 정의
+    classDef online fill:#90EE90,stroke:#2E8B57,stroke-width:3px,color:#000
+    classDef offline fill:#ADD8E6,stroke:#4682B4,stroke-width:3px,color:#000
+```
+
+### 예제 2: 사용자 인증 시스템
+
+```mermaid
+flowchart TD
+    %% 프론트엔드팀 - 로그인 UI
+    subgraph FE["프론트엔드팀 - 로그인 UI"]
+        direction TB
+        A1[온라인: 로그인 요청]:::online
+        A2{온라인: 입력 검증}:::online
+        A3[온라인: 인증 API 호출]:::online
+        
+        A1 --> A2
+        A2 -->|유효| A3
+    end
+    
+    %% 백엔드팀 - 인증 서비스
+    subgraph BE["백엔드팀 - 인증 서비스"]
+        direction TB
+        B1[온라인: 인증 요청 수신]:::online
+        B2[온라인: 사용자 정보 조회]:::online
+        B3{온라인: 비밀번호 검증}:::online
+        B4[온라인: JWT 토큰 발급]:::online
+        B5[오프라인: 로그인 로그 저장]:::offline
+        
+        B1 --> B2
+        B2 --> B3
+        B3 -->|일치| B4
+        B4 --> B5
+    end
+    
+    %% 연결
+    A3 --> B1
+    
+    %% 스타일 정의
+    classDef online fill:#90EE90,stroke:#2E8B57,stroke-width:3px,color:#000
+    classDef offline fill:#ADD8E6,stroke:#4682B4,stroke-width:3px,color:#000
+```
+
+## 추가 참고사항
+
+### Mermaid Live Editor
+- https://mermaid.live/ 에서 실시간으로 테스트 가능
+- 문법 오류를 즉시 확인할 수 있습니다
+
+### 공식 문서
+- https://mermaid.js.org/syntax/flowchart.html
+- 최신 문법은 공식 문서를 참조합니다
+
+### 버전 관리
+- Mermaid 버전: 10.x 이상 권장
+- 프로젝트에서 사용하는 Mermaid 버전을 명시합니다
+
+## 금지 사항
+
+1. 이모지 사용 절대 금지
+2. 비표준 Mermaid 문법 사용 금지
+3. 온라인/오프라인 접두사 생략 금지
+4. swimlane에 팀명-시스템명 생략 금지
+5. classDef 스타일 정의 생략 금지
+6. 노드에 :::online 또는 :::offline 클래스 적용 생략 금지
