@@ -448,7 +448,11 @@ def get_status():
 
 @app.route('/health')
 def health():
-    return jsonify({'status': 'ok'})
+    return 'OK', 200
+
+@app.route('/healthz')
+def healthz():
+    return 'OK', 200
 
 # ========== 메인 ==========
 if __name__ == '__main__':
