@@ -1,0 +1,72 @@
+flowchart TD
+    Start([시작: 여행자 호텔 예약])
+    
+    %% 1. 여행자 예약
+    A1[여행자<br/>MRT 사이트에서 숙소 예약]
+    
+    %% 2. 예약현황 확인
+    B1[AICX<br/>대시보드에서<br/>숙소별 예약현황 확인<br/>확정대기 상태 건]
+    
+    %% 3. 파트너 페이지 접속
+    C1[AICX<br/>숙소별 파트너 페이지 접속]
+    
+    %% 4. 센드버드 채팅방 확인
+    D1[AICX<br/>센드버드 채팅방 확인<br/>여행자와의 채팅방 생성됨]
+    
+    %% 5. 여행자 응대
+    E1[AICX<br/>여행자 응대<br/>예약 시 필요한 정보 확인<br/>문의사항 해결]
+    
+    %% 6. 관리시트 기입
+    F1[AICX<br/>관리시트에 예약 정보 옮겨적기]
+    
+    %% 7. 부킹시트 메일 발송
+    G1[AICX<br/>부킹시트 메일 발송<br/>호텔별 프로세스 시트 참고<br/>일부 호텔은 자동화됨<br/>랜드사 관리 호텔은 네이트온 병용]
+    
+    %% 8. VCC 결제 요청
+    H1[AICX<br/>Stay실 해외사업팀에<br/>VCC 결제 요청<br/>일부 호텔은 VCC 자동화됨]
+    
+    %% 9. 메일함 접속
+    I1[AICX<br/>마이리얼트립 메일함 접속<br/>global.ops@myrealtrip.com<br/>global.hotels@myrealtrip.com<br/>Myrealtrip.global@gmail.com]
+    
+    %% 10. 컨펌 메일 확인
+    J1[AICX<br/>호텔로부터<br/>부킹시트 메일 회신 확인<br/>컨펌 메일]
+    
+    %% 11. 예약 완료 확인
+    K1[AICX<br/>메일에서<br/>예약 완료되었다는 내용 확인]
+    
+    CondConfirm{호텔측<br/>예약 수락 여부}
+    
+    %% 수락 시
+    L1[AICX<br/>호텔측 예약번호 찾기<br/>컨펌 번호<br/>관리시트에 기입]
+    
+    M1[AICX<br/>MRT 파트너 페이지 접속]
+    
+    N1[AICX<br/>해당 예약건 찾아<br/>예약확정 처리<br/>호텔측 예약번호 입력]
+    
+    %% 거절 시
+    L2[AICX<br/>마리트에서 예약취소 처리<br/>여행자에게 안내]
+    
+    End([완료: 예약 확정])
+    
+    %% 흐름 연결
+    Start --> A1
+    A1 --> B1
+    B1 --> C1
+    C1 --> D1
+    D1 --> E1
+    E1 --> F1
+    F1 --> G1
+    G1 --> H1
+    H1 --> I1
+    I1 --> J1
+    J1 --> K1
+    K1 --> CondConfirm
+    CondConfirm -->|수락| L1
+    CondConfirm -->|거절| L2
+    L1 --> M1
+    M1 --> N1
+    N1 --> End
+    L2 --> End
+    
+    %% 스타일 정의
+    classDef default fill:#FFF9C4,stroke:#FFD54F,stroke-width:2px,color:#000

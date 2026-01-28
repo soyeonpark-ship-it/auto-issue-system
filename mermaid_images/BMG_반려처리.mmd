@@ -1,0 +1,51 @@
+flowchart TD
+    %% 시작 노드
+    Start([온라인: BMG 반려 처리 시작]):::online
+
+    %% 어드민 확인
+    subgraph Admin["운영팀 - BMG 어드민"]
+        direction TB
+        A1[온라인: 어드민 로그인]:::online
+        A2[온라인: BOOKING HISTORY 접속]:::online
+        A3[온라인: BOOKING CODE로 조회]:::online
+        A4[온라인: Issues/cancellations 확인]:::online
+    end
+
+    %% 상태 판단
+    CondStatus{온라인: BMG 상태}:::online
+
+    %% cancellation closed
+    subgraph Closed["운영팀 - 3.0 매니저"]
+        direction TB
+        B1[온라인: Closed reason outcome 확인]:::online
+        B2[온라인: completed 확인]:::online
+        B3[온라인: 수수료 공제 후 취소/환불]:::online
+    end
+
+    %% refunded
+    subgraph Refunded["운영팀 - 3.0 매니저"]
+        direction TB
+        C1[온라인: 전액 환불 확인]:::online
+        C2[온라인: 3.0 매니저 취소/환불 처리]:::online
+    end
+
+    %% cancellation requested
+    subgraph Requested["운영팀 - 슬랙"]
+        direction TB
+        D1[온라인: cs_myrealtrip_bmg 채널 접속]:::online
+        D2[온라인: 공급사 예약 번호로 태깅]:::online
+        D3[온라인: 빠른 확인 재요청]:::online
+        D4[온라인: 반려 시트에 슬랙 링크 기재]:::online
+    end
+
+    %% 종료 노드
+    End([온라인: BMG 반려 처리 종료]):::online
+
+    %% 연결
+    Start --> A1 --> A2 --> A3 --> A4 --> CondStatus
+    CondStatus -->|cancellation closed| B1 --> B2 --> B3 --> End
+    CondStatus -->|refunded| C1 --> C2 --> End
+    CondStatus -->|cancellation requested| D1 --> D2 --> D3 --> D4 --> End
+
+    %% 스타일 정의
+    classDef online fill:#FFF9C4,stroke:#FFD54F,stroke-width:2px,color:#000

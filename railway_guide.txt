@@ -1,0 +1,41 @@
+# Railway.app 배포 가이드
+# 
+# Railway는 Vercel과 비슷하지만 Selenium을 실행할 수 있습니다!
+# 
+# 1. https://railway.app 회원가입 (GitHub 연동)
+# 2. New Project 클릭
+# 3. Deploy from GitHub repo 선택
+# 4. 이 프로젝트 선택
+# 
+# 필요한 파일:
+
+# requirements.txt (이 파일 생성)
+flask==3.1.2
+selenium==4.40.0
+webdriver-manager==4.0.2
+
+# runtime.txt (Python 버전)
+python-3.11.0
+
+# Procfile (실행 명령어)
+web: python final_web_dashboard.py
+
+# railway.json (Selenium 설정)
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "startCommand": "python final_web_dashboard.py",
+    "healthcheckPath": "/",
+    "healthcheckTimeout": 100
+  }
+}
+
+# 배포 완료되면:
+# https://your-project.railway.app
+# 
+# 무료 플랜:
+# - $5 무료 크레딧/월
+# - 충분히 사용 가능!

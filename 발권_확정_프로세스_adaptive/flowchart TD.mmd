@@ -1,0 +1,64 @@
+flowchart TD
+    Start([분석 시작]):::normal
+    
+    %% 현재 프로세스
+    subgraph Current["현재 프로세스 (AS-IS) - 평균 3.5시간"]
+        direction TB
+        A1[VOF: 미확정 예약 확인<br/>3분]:::normal
+        A2[VOF: 코멘트 검토<br/>8분]:::normal
+        A3[GDS: 좌석 재확인<br/>5분]:::pingpong
+        A4[GDS: 운임 규정 확인<br/>10분 x 80건<br/>실제 필요: 20건만]:::redundancy
+        A5[전화: 항공사 문의<br/>15분 x 32건<br/>실제 필요: 32건만]:::waiting
+        A6[VOF: 확정 처리<br/>5분]:::pingpong
+        A7[팀장 승인 대기<br/>평균 3시간<br/>80건 전부]:::bottleneck
+        A8[GDS: 발권 실행<br/>3분]:::pingpong
+    end
+    
+    %% 발견된 패턴들
+    subgraph Patterns["발견된 패턴"]
+        direction TB
+        
+        P1[패턴 1: 시스템 핑퐁<br/>VOF→GDS→VOF→GDS<br/>4회 이동]:::pingpong
+        
+        P2[패턴 2: 불필요한 중복<br/>운임 확인 80건<br/>실제 필요: 20건<br/>낭비: 60건 x 10분 = 600분/일]:::redundancy
+        
+        P3[패턴 3: 승인 병목<br/>팀장 1명이 80건 처리<br/>대기 시간: 평균 3시간<br/>총 손실: 240시간/일]:::bottleneck
+        
+        P4[패턴 4: 대기 판단 비효율<br/>항공사 문의 필요 여부<br/>판단 시간 낭비]:::waiting
+    end
+    
+    %% 패턴 복합 효과
+    subgraph Complex["복합 패턴 효과"]
+        direction TB
+        C1[단순 케이스 80%<br/>+ 복잡 케이스 20%<br/>= 동일 프로세스]:::unnecessary
+        C2[총 비효율 시간<br/>건당 평균 3.5시간<br/>실제 작업: 49분<br/>낭비: 2.7시간]:::bottleneck
+    end
+    
+    End([패턴 분석 완료]):::normal
+    
+    %% 연결
+    Start --> A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7 --> A8
+    
+    A3 -.->|패턴 발견| P1
+    A6 -.->|패턴 발견| P1
+    A8 -.->|패턴 발견| P1
+    
+    A4 -.->|패턴 발견| P2
+    A7 -.->|패턴 발견| P3
+    A5 -.->|패턴 발견| P4
+    
+    P1 --> C1
+    P2 --> C1
+    P3 --> C2
+    P4 --> C1
+    
+    C1 --> End
+    C2 --> End
+    
+    %% 스타일 정의
+    classDef bottleneck fill:#FFB6C1,stroke:#DC143C,stroke-width:3px,color:#000
+    classDef redundancy fill:#FFD700,stroke:#FF8C00,stroke-width:3px,color:#000
+    classDef waiting fill:#FFFFE0,stroke:#DAA520,stroke-width:3px,color:#000
+    classDef unnecessary fill:#D3D3D3,stroke:#808080,stroke-width:3px,color:#000
+    classDef pingpong fill:#DDA0DD,stroke:#8B008B,stroke-width:3px,color:#000
+    classDef normal fill:#90EE90,stroke:#2E8B57,stroke-width:3px,color:#000

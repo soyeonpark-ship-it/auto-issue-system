@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이리얼트립 파트너 관리자 (연습용)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        .header {
+            background: #FF6B6B;
+            color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            font-size: 24px;
+        }
+        .header p {
+            font-size: 12px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 100px auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .login-box h2 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .dashboard {
+            display: none;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            background: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            color: #555;
+            border-bottom: 2px solid #dee2e6;
+        }
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .status-completed {
+            background: #d4edda;
+            color: #155724;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        input:focus {
+            outline: none;
+            border-color: #FF6B6B;
+        }
+        button {
+            width: 100%;
+            background: #FF6B6B;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #ff5252;
+        }
+        .booking-id { font-weight: 600; color: #FF6B6B; }
+        .passenger { font-weight: 600; }
+    </style>
+</head>
+<body>
+    <!-- 로그인 화면 -->
+    <div id="login-page">
+        <div class="header">
+            <h1>✈️ 마이리얼트립 파트너센터</h1>
+            <p>연습용 데모 사이트</p>
+        </div>
+        <div class="login-box">
+            <h2>로그인</h2>
+            <form onsubmit="login(event)">
+                <div class="form-group">
+                    <label for="email">이메일:</label>
+                    <input type="text" id="email" name="email" placeholder="partner@myrealtrip.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호:</label>
+                    <input type="password" id="password" name="password" placeholder="demo1234" required>
+                </div>
+                <button type="submit">로그인</button>
+                <p style="margin-top: 15px; text-align: center; color: #888; font-size: 13px;">
+                    테스트 계정: partner@myrealtrip.com / demo1234
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- 대시보드 -->
+    <div id="dashboard" class="dashboard">
+        <div class="header">
+            <h1>✈️ 마이리얼트립 파트너센터</h1>
+            <p>예약 관리 시스템</p>
+        </div>
+        
+        <div class="container">
+            <div class="card">
+                <h2>📋 미발권 예약 목록</h2>
+                <table id="bookings-table">
+                    <thead>
+                        <tr>
+                            <th>예약번호</th>
+                            <th>승객명</th>
+                            <th>여권번호</th>
+                            <th>출발-도착</th>
+                            <th>항공편</th>
+                            <th>출발일</th>
+                            <th>이메일</th>
+                            <th>상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="booking-row" data-status="pending">
+                            <td class="booking-id">MRT001</td>
+                            <td class="passenger">HONG GILDONG</td>
+                            <td class="passport">M12345678</td>
+                            <td>ICN-NRT</td>
+                            <td class="flight">KE123</td>
+                            <td class="date">2026-03-15</td>
+                            <td class="email">hong@example.com</td>
+                            <td><span class="status status-pending">미발권</span></td>
+                        </tr>
+                        <tr class="booking-row" data-status="pending">
+                            <td class="booking-id">MRT002</td>
+                            <td class="passenger">KIM YOUNGHI</td>
+                            <td class="passport">M87654321</td>
+                            <td>GMP-BKK</td>
+                            <td class="flight">TG456</td>
+                            <td class="date">2026-03-20</td>
+                            <td class="email">kim@example.com</td>
+                            <td><span class="status status-pending">미발권</span></td>
+                        </tr>
+                        <tr class="booking-row" data-status="pending">
+                            <td class="booking-id">MRT003</td>
+                            <td class="passenger">LEE MINSOO</td>
+                            <td class="passport">M11223344</td>
+                            <td>ICN-SIN</td>
+                            <td class="flight">SQ789</td>
+                            <td class="date">2026-03-25</td>
+                            <td class="email">lee@example.com</td>
+                            <td><span class="status status-pending">미발권</span></td>
+                        </tr>
+                        <tr class="booking-row" data-status="pending">
+                            <td class="booking-id">MRT004</td>
+                            <td class="passenger">PARK JIWON</td>
+                            <td class="passport">M99887766</td>
+                            <td>PUS-HND</td>
+                            <td class="flight">JL234</td>
+                            <td class="date">2026-03-28</td>
+                            <td class="email">park@example.com</td>
+                            <td><span class="status status-pending">미발권</span></td>
+                        </tr>
+                        <tr class="booking-row" data-status="pending">
+                            <td class="booking-id">MRT005</td>
+                            <td class="passenger">CHOI SUJIN</td>
+                            <td class="passport">M55667788</td>
+                            <td>ICN-LAX</td>
+                            <td class="flight">KE017</td>
+                            <td class="date">2026-04-01</td>
+                            <td class="email">choi@example.com</td>
+                            <td><span class="status status-pending">미발권</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            if (email === 'partner@myrealtrip.com' && password === 'demo1234') {
+                document.getElementById('login-page').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+            } else {
+                alert('로그인 실패!\n테스트 계정: partner@myrealtrip.com / demo1234');
+            }
+        }
+
+        // 발권 완료 표시 함수 (자동화 봇이 호출)
+        function markAsCompleted(bookingId) {
+            const rows = document.querySelectorAll('.booking-row');
+            rows.forEach(row => {
+                const id = row.querySelector('.booking-id').textContent;
+                if (id === bookingId) {
+                    row.dataset.status = 'completed';
+                    const statusSpan = row.querySelector('.status');
+                    statusSpan.textContent = '발권완료';
+                    statusSpan.className = 'status status-completed';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

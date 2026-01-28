@@ -1,0 +1,127 @@
+{
+  "id": "804814882",
+  "type": "page",
+  "ari": "ari:cloud:confluence:d9945600-944d-472c-bda2-de3cbb968d56:page/804814882",
+  "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZDk5NDU2MDAtOTQ0ZC00NzJjLWJkYTItZGUzY2JiOTY4ZDU2OmNvbnRlbnQvODA0ODE0ODgy",
+  "status": "current",
+  "title": "연동 예약 운영 모니터링",
+  "space": {
+    "id": 816250942,
+    "ari": "ari:cloud:confluence:d9945600-944d-472c-bda2-de3cbb968d56:space/816250942",
+    "key": "AOG",
+    "alias": "aoh",
+    "name": "AICX Operations Hub",
+    "type": "knowledge_base",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/AOG/settings",
+      "metadata": "",
+      "identifiers": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "description": "",
+      "history": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=AOG",
+      "permissions": "",
+      "theme": "/rest/api/space/AOG/theme",
+      "homepage": "/rest/api/content/816251265"
+    },
+    "_links": {
+      "webui": "/spaces/aoh",
+      "self": "https://mrtcx.atlassian.net/wiki/rest/api/space/AOG"
+    }
+  },
+  "version": {
+    "by": {
+      "type": "known",
+      "accountId": "712020:0c2eaea7-56a5-4a30-878e-b2ab1b60c218",
+      "accountType": "atlassian",
+      "email": "",
+      "publicName": "kyungjin.lee",
+      "profilePicture": {
+        "path": "/wiki/aa-avatar/712020:0c2eaea7-56a5-4a30-878e-b2ab1b60c218",
+        "width": 48,
+        "height": 48,
+        "isDefault": false
+      },
+      "displayName": "kyungjin.lee",
+      "isExternalCollaborator": false,
+      "isGuest": false,
+      "locale": "ko",
+      "accountStatus": "active",
+      "_expandable": {
+        "operations": "",
+        "personalSpace": ""
+      },
+      "_links": {
+        "self": "https://mrtcx.atlassian.net/wiki/rest/api/user?accountId=712020:0c2eaea7-56a5-4a30-878e-b2ab1b60c218"
+      }
+    },
+    "when": "2026-01-22T02:43:35.637Z",
+    "friendlyWhen": "1월 22, 2026",
+    "message": "",
+    "number": 7,
+    "minorEdit": false,
+    "ncsStepVersion": "951",
+    "ncsStepVersionSource": "ncs-ack",
+    "confRev": "confluence$content$804814882.89",
+    "contentTypeModified": false,
+    "_expandable": {
+      "collaborators": "",
+      "content": "/rest/api/content/804814882"
+    },
+    "_links": {
+      "self": "https://mrtcx.atlassian.net/wiki/rest/api/content/804814882/version/7"
+    }
+  },
+  "macroRenderedOutput": {},
+  "body": {
+    "storage": {
+      "value": "<ac:structured-macro ac:name=\"warning\" ac:schema-version=\"1\" ac:local-id=\"ba32da2c-e033-4c97-bf4d-3d66547888f6\" ac:macro-id=\"ed3d4ff0-ed67-4917-9aba-ba3a1fcf8e5d\"><ac:rich-text-body><p local-id=\"16662ac3-9f67-42d5-a38c-75b0a5f14d84\"><strong>모니터링이 필요한 이유</strong></p><ul local-id=\"c38b9045-a06d-4dd6-9224-7699e0a8febf\"><li local-id=\"69292b88-2436-4f07-ad79-83e63ea5574d\"><p local-id=\"b1c436fb-d6bc-4fcd-bd0b-29b5d21e5443\"><strong>예약 실패 건 자동 환불 불가</strong> : 여러 사유로 예약이 실패되는데, 시스템적으로 자동 환불되고 있지 않아 수기로 환불 처리 필요</p></li></ul></ac:rich-text-body></ac:structured-macro><p local-id=\"c0e1921a-82dd-4dfb-8979-9f8ae4cc0e0d\" /><h2 local-id=\"e2c994c2-1186-4b27-b17e-2ec799732fe2\"><ac:emoticon ac:name=\"blue-star\" ac:emoji-shortname=\":o:\" ac:emoji-id=\"2b55\" ac:local-id=\"acca49f2-7aef-4eb8-b444-407e1c616433\" ac:emoji-fallback=\"⭕\" />  <strong>모니터링 매뉴얼</strong></h2><ul local-id=\"552eac09-491c-41c4-b04d-523dd747c76f\"><li local-id=\"0f2e67b1-f0fc-4bc5-b459-07401ae39132\"><p local-id=\"b6c77595-516e-42b5-83b5-a78eecfd935b\"><strong>업무 시트</strong> : <a href=\"https://docs.google.com/spreadsheets/d/1BUPeouUqtWm_ZrQZGIX3yf8fKtx25zj1kl6dlXtMx14/edit?gid=511658573#gid=511658573\"><em>연동 모니터링 시트</em></a></p></li><li local-id=\"87ea6fe3-f3bb-423d-bb48-2aa2828978a1\"><p local-id=\"68ee6b10-0219-4ca2-92c3-1a6843c24ab5\"><strong>관련 채널</strong></p><ul local-id=\"1101533e-a28d-41f4-9ce1-e6937192cb48\"><li local-id=\"ec2d9eea-f286-4a8a-b1af-30cb53be7729\"><p local-id=\"4d517f29-5df8-4ad7-89e1-4e64ce311cd7\"><a href=\"https://aicx-kr.slack.com/archives/C02DBS14DNG\">#모니터링_공급사연동_국내예약실패</a></p></li><li local-id=\"ab5b2ff0-de4e-48a7-9f23-819d76492a47\"><p local-id=\"b9b08c16-2761-4c75-9d95-9db37cfd8aab\"><a href=\"https://aicx-kr.slack.com/archives/C04648KSZH8\">#모니터링_공급사연동_해외공통</a></p></li><li local-id=\"d257ef22-efaf-45aa-865b-1e83f065d895\"><p local-id=\"edfbc9ce-1703-482c-aa78-af4828ffdd17\"><a href=\"https://aicx-kr.slack.com/archives/C046GTFL125\">#모니터링_공급사연동_해외예약실패</a></p></li></ul></li><li local-id=\"4993d82f-224b-4ec9-b93c-a9d57974b9a9\"><p local-id=\"72a81f73-62d4-466e-b278-e3337a7bea61\"><em>공급사 어드민 및 이메일 계정 </em><a href=\"https://docs.google.com/spreadsheets/d/1aRMZdr7tLbCqptVe8f5XRGUViRoUriXoPIgrBbNzlCI/edit?pli=1&amp;gid=802671048#gid=802671048\"><em><u>정보</u></em></a><em> 참고</em><br /></p></li><li local-id=\"c21d46d5-cfb4-463b-b441-2e5c347042e5\"><p local-id=\"7267c2ed-922c-49b9-b70a-d2c5a23e995c\"><strong>모니터링 슬랙 봇</strong><em> (</em><a href=\"https://docs.google.com/spreadsheets/d/1oJfPrbFKQf2TxqjunJAR4pQcUuBdQiE6dE1ZGY7zDoo/edit?gid=866584764#gid=866584764\"><em>모니터링 알럿 정리 시트</em></a><em>)</em><br /></p><ul local-id=\"94613a1d-fe80-4c62-a348-2eb8b7eebf61\"><li local-id=\"1b17b7fa-3541-4b7b-a5a1-8de63c86aa90\"><p local-id=\"eabe817c-f954-4ad6-86e7-cd1ad73701a9\">알럿 내용과 처리 가이드가 알럿마다 붙도록 설정되어 있습니다. <br /></p><ul local-id=\"139839ca-b270-4c2e-9f3c-d069420178c5\"><li local-id=\"5450fc07-ba80-4630-bf74-a6271a7a5de1\"><p local-id=\"8a2b4479-b07a-4394-a475-b6e0e915d139\"><strong><span style=\"background-color: rgb(220,223,228);\">수기 처리 필요 건</span></strong> : 붉은 원 사이렌 이모지</p><ul local-id=\"68c8b59a-2c1a-4edf-b2a0-5c37e9363513\"><li local-id=\"38920b31-f48f-4891-b296-53b21f795f19\"><p local-id=\"31adc018-e571-4f7f-9b0c-246c86d417be\">처리 가이드대로 처리</p><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"552\" ac:original-width=\"578\" ac:custom-width=\"true\" ac:local-id=\"ea10b20e-193c-4187-b8c6-8d39df28ba87\" ac:alt=\"image-20250821-013621.png\" ac:width=\"332\"><ri:attachment ri:filename=\"image-20250821-013621.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"84d24011-4db3-47b2-8fe4-d07cdee89880\" /></li></ul></li><li local-id=\"da7fdd51-3da9-4abe-a563-dca7944777fe\"><p local-id=\"393dc94e-9648-40d2-9c86-b4188735b1dd\"><strong><span style=\"background-color: rgb(220,223,228);\">수기 처리 불필요 건</span></strong> : 댓글로 알럿 메세지 해석 내용 알림</p><ul local-id=\"af567ca4-7a08-4660-be1b-33c4b8943aa5\"><li local-id=\"0fabded0-062d-42ad-858a-106bf205965b\"><p local-id=\"d36715bb-f50e-4247-a302-cd8e3e372f62\">고객지원에서 알럿 내용대로 안내<br /></p><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"386\" ac:original-width=\"537\" ac:custom-width=\"true\" ac:local-id=\"e10c6b38-fa11-4aad-b0a4-e853b31761f3\" ac:alt=\"image-20250821-013659.png\" ac:width=\"309\"><ri:attachment ri:filename=\"image-20250821-013659.png\" ri:version-at-save=\"1\" /></ac:image></li></ul></li></ul></li></ul></li></ul><p local-id=\"4ccf0d46-e9b0-47cf-a255-085060325f52\" /><p local-id=\"cd567e1f-d4c0-4a25-b0ca-0187167d7b5d\" /><p local-id=\"6b6a85ba-2cfa-42bc-91b8-6c61a3b99afe\" /><h2 local-id=\"11433770-b0c7-46dc-b599-4d7f3dd8b5f8\">모니터링 간략 정리</h2><ol start=\"1\" local-id=\"34e725d0-4e0b-4620-ba31-a400c1bb03f5\"><li local-id=\"47b1e25b-6aa9-4ebd-b253-71952604ee7a\"><p local-id=\"8e4a4423-0ae1-48e0-8898-1bb5d07c709b\"><strong>#모니터링_공급사연동_국내예약실패</strong> 채널 체킹</p></li></ol><p local-id=\"1f71f673-e568-4689-bcf5-16133d21332e\">💡<strong>목적 : 이슈가 있는(3.0 확정대기 상태) 예약을 확인하여 공급사에 전달-&gt;상태 확인 및 확정/취소로 처리</strong></p><ul local-id=\"76b552af-d96e-4a30-bad3-eca3becc91e0\"><li local-id=\"6d73e59f-86bd-4989-ba89-0af44d956c97\"><p local-id=\"29c8ef4a-0ed7-4d74-9b79-6ad88d493603\">[예약자 정보] 내 연락처가 +82 10~으로 기재되어 자동 취소된 예약에 대해 여행자님께 수정 후 재예약 권유</p></li><li local-id=\"fc9b5efb-dcd0-4d90-90df-c7be217a1190\"><p local-id=\"b5ced35e-078b-4552-b77e-9c55f9bd1f0e\"><strong>&quot;자동 취소&quot; 메세지와 세트가 아닌 모든 알럿 </strong>체킹</p><p local-id=\"efbd6339-2bac-4abe-a7b4-294e8c9916ed\">ㄴ 공급사 확인이 필요한 예약</p><ul local-id=\"3e6775fa-a7ca-4d89-9d31-1836211aa1c9\"><li local-id=\"7486d49a-479e-4e41-a8eb-8cefc7fcff2f\"><p local-id=\"f750cf31-f2d3-4374-bed3-d81839ec4820\">업무일지 내 &lt;<strong>모니터링&gt;</strong> 시트에 기재 &amp; 체크 이모지</p></li><li local-id=\"38474c84-21a3-418f-b877-31f68d32c0fe\"><p local-id=\"4ced7cb3-3452-4bf9-9590-b83b824a0cc1\">3.0 내 상태 확인</p></li><li local-id=\"6da6b6cc-b4b8-4af6-8808-c75509e5bbc6\"><p local-id=\"a12cf00d-ff7f-422f-bdb8-2733178abc05\">확정 대기/취소 요청 상태일 경우, 각각의 공급사에 예약 상태 확인 요청&rarr;처리</p></li><li local-id=\"73d0690c-e2ac-45b8-af86-3a6a0baaff9d\"><p local-id=\"88e089e7-3b9f-4462-a5e1-bd1577448ae9\">회신에 따라 처리(처리 상황은 시트에 정리)</p></li></ul><p local-id=\"1d597ae5-1fc4-400c-bfa2-ae8120464caf\">빠른 확인이 되지 않을 수 있습니다. 담당인 날은 퇴근 전까지 처리해주시고, 휴무 혹은 담당자가 다른 날을 위해 하이라이트 등을 해주셔서 다른 분께서 f/u 이어나가실 수 있도록 해주세요 취소 요청 상태의 경우, 다른 매니저님께서 이미 진행하셨을 수 있어 슬랙에 MRT예약번호 검색하여 중복 여부를 확인해주세요<br /></p></li><li local-id=\"1e730bc1-bbe0-4fec-ace2-100ff36f78e9\"><p local-id=\"8f3ed422-fe15-4386-b538-1d6dbbab35c5\"><strong>YANOLJA 예약 실패(공급사)</strong> - 자동 취소 건 중 &ldquo;구매자 또는 사용자 전화번호가 올바르지 않습니다.&rdquo; 알럿 발생 건</p><p local-id=\"286696f4-8042-4f2c-afe8-267db70e0275\">ㄴ 확인이 필요한 건</p><ul local-id=\"6a8b65a1-771f-4630-b39d-eb2badab00e7\"><li local-id=\"884b9c77-c655-4ccd-a809-acf8a8965a2b\"><p local-id=\"0d43fdd2-3ed8-4561-a81c-b01a3735c90f\">3.0 예약자 정보 확인</p></li><li local-id=\"40bd68ac-2d66-4965-9ef8-beabe5ba8e4c\"><p local-id=\"72c4029d-aec7-45fc-8db4-f6ab2d8c313f\">+82 10-1234-5678 형식으로 기재된 경우, 여행자님께 연락처 010으로 수정 및 재예약 권유 문자 발송 &amp; 체크 이모지 (별도로 시트 기재 필요X)</p></li></ul><p local-id=\"7c8ca625-73cd-42da-ab1b-1d2abc967c34\">참고 슬랙 : <a href=\"https://mrtcx.slack.com/archives/C056LSXUS0N/p1722323464842009?thread_ts=1722318987.847959&amp;cid=C056LSXUS0N\" local-id=\"6b08ae1f-3004-4cc5-8425-9a6a815698ca\" data-card-appearance=\"inline\">https://mrtcx.slack.com/archives/C056LSXUS0N/p1722323464842009?thread_ts=1722318987.847959&amp;cid=C056LSXUS0N</a> <br /></p></li><li local-id=\"8afe4cde-f13c-4c22-b302-1b6027e9715d\"><p local-id=\"8b47669f-fcbd-4ec2-9653-f596367e4ee6\"> <strong>LS COMPANY 예약 실패(공급사)</strong></p><ul local-id=\"23e94e85-70b4-4abb-9ecf-40b4ef55388b\"><li local-id=\"41e3acdb-7123-4c3a-abec-19a8c47a5301\"><p local-id=\"5ea0db32-0f30-471e-a3da-c3dae3b8363b\">3.0 예약자 정보 확인</p></li><li local-id=\"d4ab1913-8e7a-48dd-a4f4-633d7771bc15\"><p local-id=\"f4d68119-58bf-4c20-a183-abd5e89e3ed9\">+82 10-1234-5678 형식으로 기재된 경우, 여행자님께 연락처 010으로 수정 및 재예약 권유 문자 발송 &amp; 체크 이모지 </p></li><li local-id=\"9d871542-4c01-4526-9c6c-e8eca90b572c\"><p local-id=\"5796f9e8-74af-4933-8b26-e5c2b0f2c731\">공급사(공급사 슬랙 채널)에 해당 예약건 정보 전달 하며, 연락처 오기재로 예약 실패 된 내역 공유 <br /></p></li></ul></li><li local-id=\"7ef39133-1c52-4758-afed-6be9898e6ea6\"><p local-id=\"655671c5-d434-4fa6-a452-23de7abe06b8\"><strong>그 외 실패 건</strong> - 공급사(공급사 슬랙 채널)에 해당 예약건 정보 전달 하며 예약 확정 여부 확인 후 처리 <br /></p></li></ul><ol start=\"2\" local-id=\"d24592cb-5217-4ba1-a2a3-d40944ad6979\"><li local-id=\"2b3098c6-dd7b-42cf-909f-a77e8877b468\"><p local-id=\"b7e3eb9c-689d-492a-bc1d-3bad3a576bf5\"><strong>모니터링_공급사연동_해외공통</strong> 채널 내 <strong>&quot;예약 연동 결과 반영 실패&rdquo;</strong> 알럿 체킹</p></li></ol><p local-id=\"874d9f8e-5199-4515-a21a-b9c95912a908\">💡<strong>목적 : 여행자님의 취소 가능 상태의 예약 취소 요청으로 인해 3.0에서 자동 취소 처리되었으나, 공급사에 연동되지 못한 케이스 확인하여 공급사 취소 접수 및 처리</strong></p><p local-id=\"246caccb-6bda-4e53-9bec-1ee3559d8559\">(공급사 : 예약 확정 상태 / 3.0 : 예약 취소 상태일 때 최종 취소로 싱크 맞추기 )</p><ul local-id=\"64a046be-4e22-47d1-a463-b19067ef58ff\"><li local-id=\"593e165b-0450-4765-8206-5480fc73b4af\"><p local-id=\"5a02c5c1-18b4-4c79-b4f3-14c8159feb53\">슬랙에 <strong>&quot;예약 연동 결과 반영 실패&rdquo;</strong> 검색</p><ul local-id=\"c686bef0-33d1-46d2-8120-abb15a9e1504\"><li local-id=\"d8ecf9c2-3fed-4bed-9918-c571c6603d88\"><p local-id=\"01d00110-20e0-46a6-aadb-a8bf0c7f0a4b\">업무일지 내 &lt;<strong>모니터링-공급사 환불 요청 결과 트래킹&gt;</strong> 시트에 기재 &amp; 체크 이모지</p></li><li local-id=\"bfbc9a78-368b-499a-8f95-0178352a9041\"><p local-id=\"ed62c8fa-2971-4863-afb6-3adf8e5c5de7\">3.0 상태 확인 및 각각의 공급사에 취소 접수</p></li></ul><p local-id=\"11facf0e-0439-48a1-bc74-f49f9029d8dc\">해당 케이스는 타 매니저님께서도 확인하시어 반려건 시트에 기재 혹은 직접 진행하시는 경우가 있어 슬랙에 MRT 예약번호를 검색하여 중복 여부를 확인해주세요<br /></p></li><li local-id=\"a916ec57-ea25-4ad0-984d-3d93f9bc4dfb\"><p local-id=\"412538db-31d7-41ba-a652-9a3866ec29f3\"><strong>추가 처리가 필요치 않은 예외 케이스</strong> : [몽키트래블] &ldquo;wait_confirm cancel alert&rdquo; 알럿이 발생</p><ul local-id=\"8fb28769-d686-4dec-93ab-15eea1de6f58\"><li local-id=\"b8a1fd81-5b86-4fc9-aeee-59bf69f116e4\"><p local-id=\"c60dacab-e787-4cd6-bc29-9ec7164580a4\">슬랙 검색 시, 아래와 같은 알럿이 발생하였을 때는 공급사에서도 먼저 확인 가능하기 때문에 별도의 처리 없이 보았다는 의미의 체크 이모지 (시트 기재 필요 X)<br /></p></li></ul></li></ul><ol start=\"3\" local-id=\"7793a589-34e6-4aef-b430-5fd8d67df6d0\"><li local-id=\"322156c7-59de-42f2-ad39-9c08de84d33d\"><p local-id=\"d2846115-4413-404c-b6a2-9847936b39e8\"><strong>#모니터링_공급사연동_해외예약실패</strong> 채널 체킹✨✨✨</p></li></ol><p local-id=\"718efee6-707f-42b3-baeb-c6ca953dce97\">💡<strong>목적 : 이슈가 있어 정상확정되지 않은 예약을 확인하여 공급사에 전달-&gt;상태 확인 및 확정/취소로 처리</strong></p><ul local-id=\"a0751b9b-a538-4cf1-b69f-0e4100c80de3\"><li local-id=\"0b3f5c92-5763-414f-836d-711757426e90\"><p local-id=\"56934329-d939-4d1f-ad2d-37ec5e9565fb\"><strong>&quot;자동 취소&quot; 메세지와 세트가 아닌 모든 알럿 체킹</strong></p><p local-id=\"9c7dee3e-c85c-46a3-b7e3-29a53147664e\">ㄴ확인이 필요한 건들</p><p local-id=\"5c3a0597-ad1e-48c1-8ba7-2bcba0e8d04d\" /></li><li local-id=\"f7317b00-e44d-4c31-9dc2-92eda9512b93\"><p local-id=\"317f29ec-6d34-4634-a602-e4d295518763\"><strong>처리방법</strong></p><ul local-id=\"3216670a-2acb-495f-b781-3d13d482c3d8\"><li local-id=\"c86121d7-d433-4b00-ab69-5ffddbcd32dd\"><p local-id=\"d8d3f32f-447d-449e-afaf-ce0ad10f22c5\">확인이 필요한 건 <strong>&lt;모니터링&gt;</strong> 시트에 기재 &amp; 체크 이모지</p></li><li local-id=\"1441bd4f-bee7-411e-a904-c0298fc44aeb\"><p local-id=\"fede14ee-03a7-4492-aae1-623b515d5838\">공급사 별 확인하여 3.0 확정 및 취소 처리 후 여행자님께 해당 내용 문자 발송</p></li><li local-id=\"e3e63f67-9152-4dbf-85f7-dc40dca70e11\"><p local-id=\"d33c389d-32cb-44bb-8ef1-5f03275343ef\">반려시트/ZD/슬랙에 중복된 내용이 있는지 체킹</p></li><li local-id=\"dba6eb2a-f0e0-4104-8069-206386848d6a\"><p local-id=\"39cec7c2-9fc3-4ab1-a7dc-acaa795001d7\">공급사와 커뮤니케이션 O/X &amp; 3.0 상태값 처리를 시트에 업데이트</p></li><li local-id=\"4ea62ab5-9889-4ace-beb5-f79dbbed4b11\"><p local-id=\"5a7eb050-8949-4792-a7b8-fb2f1dbfb376\">특별한 내용이 있을 경우, 비고란에 기재<br /></p></li></ul></li><li local-id=\"acaefba2-4322-4e55-a9a1-f39d9b8acdea\"><p local-id=\"51a31f37-39ed-4013-9a2a-da6ecc94f4bc\"><strong>공급사 별 처리 방법 및 확인 사항</strong></p><ul local-id=\"23e60af9-8725-45ef-8e7d-a3be59477177\"><li local-id=\"d5cb775b-dfcf-44b2-a97f-4e6bfe22b8d0\"><p local-id=\"c94436c2-1546-478c-9a66-54113b095118\"><strong>KLOOK </strong>- 일반적으로 알럿 내 취소 사유에 대해 기재되어 있음</p><ul local-id=\"2a227c92-596e-43ad-a607-84cee8606204\"><li local-id=\"b0b9dfb6-897a-47bf-83e2-9a1be64eb45c\"><p local-id=\"0a8beb4d-3dac-4644-8e55-0ecc3bf97d01\">사유가 명확 : 별도의 공급사 컨택없이 여행자님께 안내 후 취소 처리</p></li><li local-id=\"e7aa571d-669e-4944-a26f-5a8a7f5c5229\"><p local-id=\"20d03b8f-f3fc-4879-a680-a38684385ea6\">사유가 명확X : 생텀에서 공급사 상품 번호 검색&rarr;공급사 어드민에 예약내역 확인 or 공급사에 문의 예시) 1401 - invalid other info: need number, package_id:65587, otherinfo_id:10010081, otherinfo_field_key:participant_type_people (인원수를 숫자로 기재하지 않아 공급사 예약 미생성 ) &rarr; 여행자님께 인원수 숫자로(02, 03)기재 요청 및 취소 안내 문자 발송 후 3.0 취소</p></li></ul></li><li local-id=\"4a8b9362-a0b5-44fd-8497-ee79f47bcc86\"><p local-id=\"ea80fdb2-8a8a-4c17-be83-a769f2387799\"><strong>BMG</strong> - 3.0 여행자 영문 성함을 확인하여 BMP에 검색하여 예약 내역 확인 (상품명/예약 일시(1시간 시차)/인원/결제금액 모두 비교)</p><ul local-id=\"1c03de57-772e-41b7-bc45-5e3d4b0982bc\"><li local-id=\"41081973-07a8-4728-9cac-0eec1f23e1c3\"><p local-id=\"ad6f86a7-2bf7-4dff-9d5e-93417bccf34f\">Reject/Payment Pending : 공급사 예약 실패로 여행자님 안내 및 취소 처리</p></li><li local-id=\"f0c91c5e-0e86-49fe-bfeb-cd7ef18e2605\"><p local-id=\"c5c112b2-caf2-422e-83f4-2a31181093b4\">검색이 되지 않는 경우 : 공급사에 슬랙 문의</p></li></ul></li><li local-id=\"64ff8eb7-5c74-4604-9784-1854d82ad525\"><p local-id=\"b7b00cc2-512e-4c34-93f7-915cb373fec7\"><strong>JTR </strong></p><ul local-id=\"bcdc217d-be92-4084-81cc-a6eeb898b6f1\"><li local-id=\"75b7f4f7-c842-4a12-83ae-4e0c2cf96323\"><p local-id=\"0190f89d-76d7-4a1b-a789-5ab486f1cd1d\">부분 예약 확정 : 공급사 어드민에서 여행자 연락처로 생성된 예약이 있는지 확인 후, 확정된 예약건의 바우처를 수기 업로드 &gt; 예약 확정 처리 &gt; 옵션 부분 환불로 예약 실패한 건의 환불 진행 &gt; 여행자 문자 안내</p></li><li local-id=\"b9ebfcfa-b124-4ed4-ab2e-7bc99fbb5371\"><p local-id=\"5570430c-abab-40e2-97cb-6e588d817f74\">그 외 예약 실패 : 공급사 어드민 예약 내역 검색 후 처리  </p></li></ul></li><li local-id=\"5ccd97f6-6bd2-4a9d-a5dc-c53dce0b2b00\"><p local-id=\"f4800ac8-48fb-475f-86ff-ec2a2d82e00a\"><strong>GYG</strong> </p><ul local-id=\"a5657c21-7126-4e61-9f51-9146365ff6f9\"><li local-id=\"cdf99457-181f-483e-84f4-05838ae4cada\"><p local-id=\"e8f5228d-dc44-4f15-84d8-a459534a2713\">CS 전화 : 여행자님 이메일/전화번호/성함/상품명 전달하여 예약 내역 확인</p></li><li local-id=\"a4d78db2-cf21-4987-acbc-45a3874a7ea0\"><p local-id=\"28c3ce3c-44bb-4d90-9711-3c610ecb3ca8\">공급사 문의하기 채널 : 여행자님 이메일/전화번호/성함/상품명 전달하여 예약 내역 확인 요청 &gt; GYG 메일로 접수되는 GYG 티켓 번호를 모니터링 비고란에 기재하여 추후 팔로업 할 수 있도록 함</p></li></ul></li><li local-id=\"101871c4-583c-4a60-98ae-71e303fa429d\"><p local-id=\"4e57266e-882b-4a1f-90e5-56d4508c47fd\"><strong>티켓츠</strong></p><ul local-id=\"8bdd241e-8a66-47c9-b7ad-9713b4b3b3a3\"><li local-id=\"aa8c2174-695b-440e-b41b-2312f9b43176\"><p local-id=\"6717b470-b181-4213-9f78-e094645ca1da\">&ldquo;여행일 1일 전까지 확정되지 않아서 확인 필요.&rdquo; 메세지 : 공급사 챗에 예약번호 전달 및 바우처 요청&rarr;3.0 확정 처리</p></li><li local-id=\"20f1ec85-2a09-48df-a5f0-97aa1a3d243d\"><p local-id=\"ea78c067-7720-4832-b114-60d3a959b817\">예약 번호 있는 경우 : 공급사 챗에 예약 내역 확인 </p></li><li local-id=\"8d140db9-35da-4cae-9916-4bbdcaa5c417\"><p local-id=\"12e09dbb-0031-4bc9-9b32-f7fd421bbf81\">예약 번호가 없는 경우 : 여행일과 상품명을 토대로 공급사 어드민에서 예약 확인 혹은 컨택메일로 공급사에 문의</p></li></ul></li><li local-id=\"4c42fbc9-241f-4af2-83cb-9ff02e3758e8\"><p local-id=\"efa9c6f3-da7a-43b6-9fdf-3cfc7eda025f\"><strong>링크티비티</strong></p><ul local-id=\"2bfb2e6e-1562-4741-b3c1-7a154f3b6662\"><li local-id=\"289fe749-f9c2-4250-93fd-7f2a43f5db1a\"><p local-id=\"ef0185ab-f557-4f9d-8638-68828514df23\">여행자 성함으로 어드민에서 검색하여 예약 내역 확인 및 처리</p></li><li local-id=\"c23fd824-32b1-4fac-b3d8-7d7eb10260d0\"><p local-id=\"af172c48-f8b2-4221-9672-5329e8f54630\">검색되지 않는 경우 : 일반적으로, 미생성이 맞으나 간혹 오류가 발생하는 경우가 있어 팀 노티 필요</p></li></ul></li><li local-id=\"315cffb5-62c0-458b-b09b-a85e9472ffe8\"><p local-id=\"0067fafa-1119-482f-90ed-bfb9e6d2e3c4\"><strong>트립닷컴</strong></p><ul local-id=\"c177d9f8-6dfd-4339-98e1-fe6b95deb24b\"><li local-id=\"2a54e036-7b6d-4a77-8e30-3e9297f9f7fb\"><p local-id=\"496e1af7-16f4-4516-bb78-f392e9866a77\">상세 사유 확인 : 사유가 명확할 경우, 공급사 컨택 없이 처리</p></li><li local-id=\"b1799fcc-c1b7-4f22-8d74-2503caaab7fd\"><p local-id=\"a508b802-eaf0-4356-bf6b-a04e757f40e8\">사유가 불분명 할 때 : 여행자 이메일/상품명/성함을 토대로 공급사에 메일/챗 문의</p></li></ul></li><li local-id=\"4f19a7e9-496d-42f8-a62b-c37de3e2e184\"><p local-id=\"dc3f2dd7-8f89-4cdd-9060-040b368492e4\"><strong>바이어터 </strong>- 컨택 메일을 통해 공급사에 문의 후 처리</p></li><li local-id=\"498801a6-106d-45e5-9aea-0c4e978888cc\"><p local-id=\"ab6d6a5b-9a0f-48f8-97cf-05d9a2588385\"><strong>레일유럽</strong></p><ul local-id=\"f9186b56-2fff-407f-9396-9a8a8ab6b6da\"><li local-id=\"05bb390b-0a9a-4071-881f-16c1505df533\"><p local-id=\"91f097f4-8656-4057-a088-175999ad5745\">알럿 내 취소 사유에 대해 기재되어 있어 확인 후 처리 예시)[CODE] era-request-validation-error [LABEL] Request validation error [DETAILS] [updateTravelers.travelers[0].emailAddress: must be a well-formed email address] (이메일 주소 오류)&rarr;여행자님께 이메일 잘못 기재되어 예약 취소 안내 및 3.0 수동 취</p></li></ul></li><li local-id=\"ddc5f5c3-8f6d-43a7-9d1f-c4b501b99e1f\"><p local-id=\"6bbd834a-289b-492e-8b59-6254bd5b1b46\"><strong>USH :</strong> MRT예약번호 뒤에 HMYRLTRP를 붙여 시스템 예약 상태 확인 후 처리</p></li><li local-id=\"5132cb0d-825d-4a68-bc99-ab6b0a8ca9c3\"><p local-id=\"6ec2d1a2-5883-4b1c-8d03-26c25d7cc85f\"><strong>LA 디즈니 :</strong> &ldquo;확정 대기&rdquo; 상태로 확인 되면, &ldquo;예약 취소&rdquo; 진행 후 제품팀에 해당 알럿 +예약 번호 전달후 예약 실패로 취소 처리 한 내역을 알림 </p></li><li local-id=\"4f0d3254-240f-4e9d-afb2-7dae923b803d\"><p local-id=\"acfe0f48-9507-462b-bc61-fe29f5a84039\"><strong>KKDAY :</strong> 공급사 어드민 확인 하여 &ldquo;취소 완료&rdquo; 상태가 아닌 예약일 경우, KKDAY 슬랙 채널로 해당 예약 실패 되었는지 공급사 담당자에 확인 후 처리 </p></li></ul></li></ul><blockquote local-id=\"8efef505-6034-41bb-a73e-b3a25ac6a440\"><p local-id=\"ffef8836-d3be-43c8-b6e8-18b186a452d0\"><strong>※ 정확한 공급사 예약번호를 확인할 수 없는 경우가 많아 모든 정보를 확인하여 찾는 예약이 맞는지 정확한 확인이 필요합니다 (여행자님께서 여러 개의 예약을 진행하셨는지, 부분예약 성공인지 등)</strong></p></blockquote><blockquote local-id=\"9a7ba844-e89a-4304-b275-6711e2073e04\"><p local-id=\"899843b2-5774-43c1-beac-9f6d6a9924dc\"><strong>※ </strong>3.0에서는 &lsquo;대기&rsquo;이더라도, 여행자님 사이드에서는 &lsquo;확정&rsquo;으로 보이는 것이 기본 프로세스입니다. 시간이 지체될수록 여행자님 컴픓레인이 생길 여지가 있어 챗 등 다양한 수단을 사용하여 가급적 바로 처리 부탁 드립니다. 담당인 날은 퇴근 전까지 꼭 처리해주시고, 휴무 혹은 담당자가 다른 날을 위해 하이라이트 등을 해주셔서 다른 분께서 f/u 이어나가실 수 있도록 해주세요</p></blockquote><blockquote local-id=\"092b0ee7-aaa9-4645-86dd-010ae4fc122e\"><p local-id=\"4225e1a0-58b7-4b20-8365-14475480e9c2\"><strong>※ </strong>다양한 상황이 있기 때문에 &lt;모니터링&gt; 시트 내 이전에 기재된 내용을 보면서 각 케이스마다 어떻게 접근해야하는지 이해해주세요(다만, 메뉴얼은 아니기 때문에 명확하지 않다고 판단될 경우, 무조건 공급사 컨택/엔젤님께 문의바랍니다)</p></blockquote><blockquote local-id=\"dac992cc-fe44-462b-be55-2b32191a50f6\"><p local-id=\"27b2edf9-7d7b-40ab-9ed2-23fba0a35095\" /></blockquote><h2 local-id=\"07881c1d-27b3-47a5-b19e-84b06a23c7ae\">GYG 쿼리 모니터링</h2><p local-id=\"6423b90a-4ead-4ee7-9603-94102c4a7792\">💡목적 : GYG에서 환불이 진행되었으나, 3.0에 자동 연동되지 않은 건 확인하여 환불 및 여행자님께 안내</p><p local-id=\"641d1e6e-ccac-4ec1-b7db-b6acb6ac84c1\">리대쉬 페이지ㄱ <a href=\"https://redash.myrealtrip.net/queries/14902?p_type=ALL\">https://redash.myrealtrip.net/queries/14902?p_type=ALL</a></p><p local-id=\"c57c0305-d5dd-4291-82a1-41c7eb2e5510\">[GYG 환불 알림 예약건] refresh - refund satus 정렬 - 공백이 있는 건들은 모두 &lt;모니터링&gt; 시트에 기재-컨택메일내 &ldquo;Price adjusted&rdquo; 메일에서 환불 금액 확인/ ZD에 중복 여부 확인 (티켓 있으면 업데이트- 등록으로 전환하여 담당자에게 노티)</p><ul local-id=\"bf62df96-6bfc-4266-bf63-b818a88b6d95\"><li local-id=\"c00f28cf-afc6-40a0-a02f-e79cc1ced395\"><p local-id=\"82d44eb3-6ca4-4557-9991-7127a8243031\">티켓 생성 지양</p><ul local-id=\"a3774a3f-4973-4240-b572-9d1c693bfd8f\"><li local-id=\"770f8647-f019-4026-b27c-0a1e4eda5ca4\"><p local-id=\"b4d43178-a5cb-46ea-9340-e75bd93de0b0\">3.0 예약 검색 - 여행일이 지났거나, 컨택 메일에서 여행자님께 이미 메일로 안내가 되었거나 여행일이 한참 남는 등 간단 안내로 끝내도 된다 판단될 경우 -&gt;&nbsp; 3.0 처리&nbsp; 및 문자 안내</p></li><li local-id=\"e43bf486-511f-4145-bce7-6b4a7de270f1\"><p local-id=\"6c04eba1-6d91-4efc-a524-97e533e7a175\">당일,전일 등 여행자님께 신속하고 정확하게 안내가 필요할 때는 티켓 생성 - 메일 문자 모두 발송</p></li></ul></li></ul><blockquote local-id=\"3abf530d-7297-45f1-838f-7efc450455ab\"><p local-id=\"b10e6a1f-4389-4630-b0eb-17c0c4e2b55b\">보통 하루에 한 두 건은 발생하는데 3일 넘게 아무 것도 검색이 안되는 경우, 리대쉬 오류가 있어 팀리더님께 노티해주세요</p></blockquote><p local-id=\"143bec74-75d6-4e54-97a9-998ed226dfce\">GYG의 경우, 담당자 처리 실수로 본문에 환불 되었다는 의미의 &ldquo;reduced&rdquo; 이후 &ldquo;increased&rdquo; 메일이 추가로 수신되는 경우가 있습니다. 이 때 쿼리 알럿은 두 개가 발생하기 때문에 시트에 기재하실 때 중복 여부도 함께 확인해주세요</p><p local-id=\"7292571d-4429-40fa-837b-cf6a45a7f490\">투어 중 중단 등을 사유로 부분환불 된 경우에도 쿼리는 발생합니다. 금액 확인 부탁드려요.</p><blockquote local-id=\"f3b23b44-381f-4447-a403-a94028386756\"><p local-id=\"c1a5cafd-2365-44b9-84a5-522670b95b12\" /></blockquote>",
+      "representation": "storage",
+      "embeddedContent": [],
+      "_expandable": {
+        "content": "/rest/api/content/804814882"
+      }
+    },
+    "_expandable": {
+      "editor": "",
+      "atlas_doc_format": "",
+      "view": "",
+      "export_view": "",
+      "styled_view": "",
+      "dynamic": "",
+      "editor2": "",
+      "anonymous_export_view": ""
+    }
+  },
+  "extensions": {
+    "position": 1023
+  },
+  "_expandable": {
+    "childTypes": "",
+    "container": "/rest/api/space/AOG",
+    "schedulePublishInfo": "",
+    "metadata": "",
+    "operations": "",
+    "schedulePublishDate": "",
+    "children": "/rest/api/content/804814882/child",
+    "restrictions": "/rest/api/content/804814882/restriction/byOperation",
+    "history": "/rest/api/content/804814882/history",
+    "ancestors": "",
+    "draftVersion": "",
+    "descendants": "/rest/api/content/804814882/descendant"
+  },
+  "_links": {
+    "editui": "/pages/resumedraft.action?draftId=804814882",
+    "webui": "/spaces/aoh/pages/804814882",
+    "edituiv2": "/spaces/AOG/pages/edit-v2/804814882",
+    "context": "/wiki",
+    "self": "https://mrtcx.atlassian.net/wiki/rest/api/content/804814882",
+    "tinyui": "/x/IoD4Lw",
+    "collection": "/rest/api/content",
+    "base": "https://mrtcx.atlassian.net/wiki"
+  }
+}

@@ -1,0 +1,49 @@
+# Confluence Wiki 생성 프롬프트 템플릿
+
+## 기본 템플릿 (복사해서 사용)
+
+@.cursor/rules/confluence-wiki-generator.mdc 
+[원본 페이지 URL] 을 [대상 페이지 URL] 위키 생성해줘
+
+
+## 실제 사용 예시
+
+### 예시 1: 전체 URL
+@.cursor/rules/confluence-wiki-generator.mdc 
+https://mrtcx.atlassian.net/wiki/spaces/aoh/pages/882901069 
+을 
+https://mrtcx.atlassian.net/wiki/spaces/aoh/pages/1176109101 
+위키 생성해줘
+
+
+### 예시 2: 페이지 ID만
+@.cursor/rules/confluence-wiki-generator.mdc 
+882901069 을 1176109101 위키 생성해줘
+
+
+### 예시 3: 한 줄로
+@.cursor/rules/confluence-wiki-generator.mdc 882901069 을 1176109101 위키 생성해줘
+
+
+## 채워서 사용하기
+
+1. 원본 페이지 ID 확인: _____________
+2. 대상 페이지 ID 확인: _____________
+
+@.cursor/rules/confluence-wiki-generator.mdc 
+[여기에 원본 ID] 을 [여기에 대상 ID] 위키 생성해줘
+
+
+## 체크리스트
+
+작업 전 확인:
+□ 환경 변수 설정 완료 (CONFLUENCE_EMAIL, CONFLUENCE_API_TOKEN)
+□ 원본 페이지 URL 또는 ID 준비
+□ 대상 페이지 URL 또는 ID 준비
+□ 대상 페이지 권한 확인 (쓰기 가능)
+
+작업 후 확인:
+□ [SUCCESS] 메시지 확인
+□ 버전 번호 증가 확인
+□ 이미지 업로드 확인
+□ Confluence 페이지 새로고침하여 확인

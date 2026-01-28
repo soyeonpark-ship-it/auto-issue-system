@@ -1,0 +1,123 @@
+flowchart TD
+    Start([시작: 파트너 문의])
+    
+    %% 문의 유입
+    A1[이메일 접수]
+    A2[홈페이지 문의]
+    
+    %% 젠데스크
+    B1[젠데스크 티켓 생성]
+    B2[파트너지원 처리중]
+    
+    %% 문의 유형 분기
+    CondType{문의 유형}
+    
+    %% 1. 상품 수정
+    C1[상품 정보 수정<br/>수정 가능 영역 확인]
+    CondEdit{파트너 직접 수정 가능 여부}
+    D1[권한 제공]
+    E1[PO 전달]
+    
+    %% 2. 환불
+    F1[환불 요청<br/>부분/전액]
+    F2[환불 처리]
+    
+    %% 3. 양수양도
+    G1[양수양도 처리]
+    
+    %% 4. 정보 변경
+    H1[정보 변경<br/>계좌/기타]
+    H2[주소 변경 불가]
+    
+    %% 5. 상품 페이지
+    I1[상품 페이지<br/>파트너 정보 노출]
+    
+    %% 6. 시스템
+    J1[시스템 오류<br/>개발팀 전달]
+    
+    %% 7. 상품 노출
+    K1[상품 노출<br/>설정 조정]
+    
+    %% 8. AI 후기
+    L1[AI 후기 이슈<br/>삭제 처리]
+    
+    %% 9. 핑퐁
+    M1[핑퐁 케이스<br/>추가 정보 요청]
+    M2[파트너 응답 대기]
+    
+    %% 10. 타 부서
+    N1[정산<br/>매출/자금팀]
+    N2[사업실]
+    N3[서비스운영실]
+    N4[담당 PO]
+    
+    %% 완료
+    Complete[처리 완료 안내]
+    End([종료: 티켓 종료])
+    
+    %% 흐름 연결
+    Start --> A1
+    Start --> A2
+    A1 --> B1
+    A2 --> B1
+    B1 --> B2
+    B2 --> CondType
+    
+    %% 1. 상품 수정
+    CondType -->|상품 수정| C1
+    C1 --> CondEdit
+    CondEdit -->|가능| D1
+    CondEdit -->|불가| E1
+    D1 --> Complete
+    E1 --> Complete
+    
+    %% 2. 환불
+    CondType -->|환불| F1
+    F1 --> F2
+    F2 --> Complete
+    
+    %% 3. 양수양도
+    CondType -->|양수양도| G1
+    G1 --> Complete
+    
+    %% 4. 정보 변경
+    CondType -->|정보 변경| H1
+    H1 --> H2
+    H2 --> Complete
+    
+    %% 5. 상품 페이지
+    CondType -->|상품 페이지| I1
+    I1 --> Complete
+    
+    %% 6. 시스템
+    CondType -->|시스템| J1
+    J1 --> Complete
+    
+    %% 7. 상품 노출
+    CondType -->|상품 노출| K1
+    K1 --> Complete
+    
+    %% 8. AI 후기
+    CondType -->|AI 후기| L1
+    L1 --> Complete
+    
+    %% 9. 핑퐁
+    CondType -->|핑퐁| M1
+    M1 --> M2
+    M2 --> Complete
+    
+    %% 10. 타 부서
+    CondType -->|정산| N1
+    CondType -->|사업실| N2
+    CondType -->|운영실| N3
+    CondType -->|PO| N4
+    N1 --> Complete
+    N2 --> Complete
+    N3 --> Complete
+    N4 --> Complete
+    
+    %% 완료
+    Complete --> End
+    
+    %% 스타일 정의
+    classDef default fill:#FFF9C4,stroke:#FFD54F,stroke-width:2px,color:#000

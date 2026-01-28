@@ -1,0 +1,53 @@
+flowchart TD
+    Start([시작: 숙박권 등록<br/>매니저 페이지 2.0])
+    
+    %% 1-2. 정보 전달
+    A1[국내사업실<br/>젠데스크로 숙박권 정보 전달<br/>기술서]
+    
+    %% 3. 정보 재작성
+    B1[AICX<br/>기술서 확인 후<br/>양식에 맞게 정보 재작성]
+    
+    %% 4. 숙박권 생성
+    C1[AICX<br/>매니저 페이지 2.0<br/>숙박권 생성 및 정보 입력]
+    
+    %% 5. 시스템 세팅
+    D1[AICX<br/>생텀에서 시스템 세팅 작업]
+    
+    %% 6. 문자 템플릿
+    E1[AICX<br/>매니저 페이지 2.0<br/>예약 확정 문자 템플릿 추가]
+    
+    %% 7. 구매 테스트
+    F1[AICX<br/>MRT 사이트에서<br/>구매 테스트]
+    
+    %% 8. 대행사 확인
+    G1[AICX<br/>숙박권 판매 대행사와 연락<br/>정상 판매처리<br/>문자 정상발송<br/>고객예약정보 수집양식 확인]
+    
+    CondProblem{문제 발생}
+    
+    G2[AICX<br/>국내사업실에 인계]
+    
+    %% 9. KMS 업로드
+    H1[AICX<br/>젠데스크 KMS에<br/>숙박권 정보 업로드<br/>비항공AI 스쿼드 고객응대 참고]
+    
+    %% 10. 완료 메일
+    I1[AICX<br/>국내사업실에<br/>호캉스 세팅 완료 메일 발송]
+    
+    End([완료: 숙박권 판매 시작])
+    
+    %% 흐름 연결
+    Start --> A1
+    A1 --> B1
+    B1 --> C1
+    C1 --> D1
+    D1 --> E1
+    E1 --> F1
+    F1 --> G1
+    G1 --> CondProblem
+    CondProblem -->|문제 발생| G2
+    CondProblem -->|정상| H1
+    G2 --> End
+    H1 --> I1
+    I1 --> End
+    
+    %% 스타일 정의
+    classDef default fill:#FFF9C4,stroke:#FFD54F,stroke-width:2px,color:#000

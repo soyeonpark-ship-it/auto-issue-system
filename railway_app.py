@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Railway 클라우드 배포용 - 다중 사용자 자동 발권 시스템
-Playwright 헤드리스 모드로 실행
+Railway 클라우드 배포용 - 자동 발권 시스템 (데모 버전)
+Playwright 없이 순수 Flask로 동작
 """
 
 from flask import Flask, render_template_string, jsonify, request
-from playwright.sync_api import sync_playwright
 import threading
 import time
 import os
@@ -23,7 +22,6 @@ class SystemStatus:
         self.history = []
         self.logs = []
         self.lock = threading.Lock()
-        self.demo_mode = True  # 데모 모드 (실제 사이트 연동 전)
     
     def add_to_queue(self, task):
         with self.lock:
@@ -64,20 +62,19 @@ class SystemStatus:
                 'queue': list(self.queue),
                 'queue_count': len(self.queue),
                 'history': self.history[:10],
-                'logs': self.logs[-30:],
-                'demo_mode': self.demo_mode
+                'logs': self.logs[-30:]
             }
 
 status = SystemStatus()
 
-# ========== 데모 모드 자동화 (실제 사이트 연동 전) ==========
+# ========== 데모 자동화 ==========
 def run_demo_automation(task):
-    """데모 모드: 실제 브라우저 없이 시뮬레이션"""
+    """데모 모드: 실제 자동화 시뮬레이션"""
     status.is_running = True
     status.current_task = task
     
     try:
-        status.add_log(f"[{task['user']}] 작업 시작 (데모 모드)", "INFO")
+        status.add_log(f"[{task['user']}] 작업 시작", "INFO")
         
         # 데모 주문 데이터
         demo_orders = [
@@ -88,15 +85,15 @@ def run_demo_automation(task):
             {'order_id': 'MRT-005', 'customer_name': 'CHOI YUNA', 'email': 'choi@test.com', 'pass_type': '4DAY', 'quantity': '2'},
         ]
         
-        status.add_log("마이리얼트립 접속 중...", "INFO")
-        time.sleep(1)
+        status.add_log("마이리얼트립 파트너센터 접속 중...", "INFO")
+        time.sleep(1.5)
         status.add_log("마이리얼트립 로그인 성공!", "SUCCESS")
         
-        status.add_log(f"{len(demo_orders)}건의 주문 발견!", "SUCCESS")
-        time.sleep(0.5)
+        status.add_log(f"{len(demo_orders)}건의 미발권 주문 발견!", "SUCCESS")
+        time.sleep(1)
         
         status.add_log("공급사 포털 접속 중...", "INFO")
-        time.sleep(1)
+        time.sleep(1.5)
         status.add_log("공급사 포털 로그인 성공!", "SUCCESS")
         
         results = []
@@ -104,14 +101,14 @@ def run_demo_automation(task):
         
         for i, order in enumerate(demo_orders, 1):
             pass_name = {'2DAY': '2일권', '4DAY': '4일권', '6DAY': '6일권'}[order['pass_type']]
-            status.add_log(f"[{i}/{len(demo_orders)}] {order['customer_name']} - {pass_name} 처리 중...", "INFO")
+            status.add_log(f"[{i}/{len(demo_orders)}] {order['customer_name']} - {pass_name} x{order['quantity']} 처리 중...", "INFO")
             
-            time.sleep(1.5)  # 처리 시뮬레이션
+            time.sleep(2)  # 처리 시뮬레이션
             
             voucher_code = f"PMP-{order['pass_type']}-{int(time.time())}"
             success_count += 1
             
-            status.add_log(f"[OK] {order['order_id']}: {voucher_code}", "SUCCESS")
+            status.add_log(f"[OK] 바우처 발급: {voucher_code}", "SUCCESS")
             status.add_log(f"[EMAIL] {order['email']}로 바우처 발송 완료", "SUCCESS")
             
             results.append({
@@ -120,6 +117,8 @@ def run_demo_automation(task):
                 'voucher_code': voucher_code,
                 'status': 'success'
             })
+            
+            time.sleep(0.5)
         
         # 작업 이력 저장
         task_result = {
@@ -133,7 +132,7 @@ def run_demo_automation(task):
         }
         status.add_history(task_result)
         
-        status.add_log(f"작업 완료! (성공: {success_count}, 실패: 0)", "SUCCESS")
+        status.add_log(f"작업 완료! (성공: {success_count}건, 실패: 0건)", "SUCCESS")
         
     except Exception as e:
         status.add_log(f"오류 발생: {str(e)}", "ERROR")
@@ -141,64 +140,13 @@ def run_demo_automation(task):
     finally:
         status.is_running = False
         status.current_task = None
-
-# ========== 실제 Playwright 자동화 (나중에 사용) ==========
-def run_real_automation(task):
-    """실제 모드: Playwright로 실제 사이트 자동화"""
-    status.is_running = True
-    status.current_task = task
-    
-    playwright = None
-    browser = None
-    
-    try:
-        status.add_log(f"[{task['user']}] 작업 시작", "INFO")
-        status.add_log("Playwright 브라우저 초기화 중...", "INFO")
-        
-        playwright = sync_playwright().start()
-        browser = playwright.chromium.launch(headless=True)  # 서버에서는 headless 필수!
-        context = browser.new_context()
-        page = context.new_page()
-        
-        # 여기에 실제 마이리얼트립/공급사 사이트 자동화 코드 추가
-        # page.goto('https://partners.myrealtrip.com')
-        # ...
-        
-        status.add_log("실제 사이트 자동화는 아직 구현되지 않았습니다", "WARNING")
-        status.add_log("데모 모드로 전환합니다", "INFO")
-        
-        # 데모 실행
-        context.close()
-        browser.close()
-        playwright.stop()
-        
-        run_demo_automation(task)
-        return
-        
-    except Exception as e:
-        status.add_log(f"오류 발생: {str(e)}", "ERROR")
-    
-    finally:
-        if browser:
-            browser.close()
-        if playwright:
-            playwright.stop()
-        status.is_running = False
-        status.current_task = None
-
-# ========== 작업 처리 ==========
-def process_task(task):
-    if status.demo_mode:
-        run_demo_automation(task)
-    else:
-        run_real_automation(task)
 
 def worker_thread():
     while True:
         if not status.is_running:
             task = status.get_next_task()
             if task:
-                process_task(task)
+                run_demo_automation(task)
         time.sleep(1)
 
 worker = threading.Thread(target=worker_thread, daemon=True)
@@ -212,68 +160,74 @@ HTML_TEMPLATE = '''
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자동 발권 시스템</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Noto Sans KR', sans-serif;
             background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             min-height: 100vh;
             color: #fff;
             padding: 20px;
         }
         .container { max-width: 1200px; margin: 0 auto; }
-        h1 { text-align: center; margin-bottom: 10px; font-size: 28px; }
-        .subtitle { text-align: center; color: #888; margin-bottom: 20px; font-size: 14px; }
+        h1 { text-align: center; margin-bottom: 8px; font-size: 26px; font-weight: 700; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 25px; font-size: 13px; }
         .demo-badge {
             display: inline-block;
-            background: #ff6b6b;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
             color: white;
-            padding: 3px 10px;
+            padding: 4px 12px;
             border-radius: 12px;
             font-size: 11px;
             margin-left: 10px;
+            font-weight: 500;
         }
         .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
         @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
         .card {
-            background: rgba(255,255,255,0.08);
-            border-radius: 15px;
-            padding: 25px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 24px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.08);
         }
-        .card h2 { margin-bottom: 20px; font-size: 16px; color: #4ecdc4; }
-        .status-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-bottom: 20px; }
+        .card h2 { margin-bottom: 18px; font-size: 15px; color: #4ecdc4; font-weight: 600; }
+        .status-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
         .status-item {
-            background: rgba(255,255,255,0.05);
-            padding: 15px;
-            border-radius: 10px;
+            background: rgba(255,255,255,0.04);
+            padding: 16px;
+            border-radius: 12px;
             text-align: center;
         }
-        .status-label { font-size: 11px; color: #888; margin-bottom: 5px; }
-        .status-value { font-size: 22px; font-weight: bold; }
-        .status-value.running { color: #4ecdc4; }
+        .status-label { font-size: 11px; color: #777; margin-bottom: 6px; }
+        .status-value { font-size: 24px; font-weight: 700; }
+        .status-value.running { color: #4ecdc4; animation: pulse 1.5s infinite; }
         .status-value.waiting { color: #ffd93d; }
-        .input-group { margin-bottom: 15px; }
-        .input-group label { display: block; margin-bottom: 8px; color: #aaa; font-size: 13px; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+        .input-group { margin-bottom: 16px; }
+        .input-group label { display: block; margin-bottom: 8px; color: #999; font-size: 13px; }
         .input-group input {
             width: 100%;
-            padding: 12px;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 8px;
+            padding: 14px 16px;
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 10px;
             background: rgba(255,255,255,0.05);
             color: #fff;
             font-size: 15px;
+            transition: all 0.2s;
         }
-        .input-group input:focus { outline: none; border-color: #4ecdc4; }
-        .input-group small { color: #666; font-size: 11px; margin-top: 5px; display: block; }
+        .input-group input:focus { outline: none; border-color: #4ecdc4; background: rgba(78,205,196,0.1); }
+        .input-group input::placeholder { color: #555; }
+        .input-group small { color: #555; font-size: 11px; margin-top: 6px; display: block; }
         .btn {
             width: 100%;
-            padding: 14px;
+            padding: 16px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 15px;
-            font-weight: bold;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
         }
@@ -283,55 +237,62 @@ HTML_TEMPLATE = '''
         }
         .btn-primary:hover:not(:disabled) {
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(78, 205, 196, 0.4);
+            box-shadow: 0 8px 25px rgba(78, 205, 196, 0.35);
         }
         .btn:disabled { opacity: 0.5; cursor: not-allowed; }
         .queue-item {
-            padding: 10px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 5px;
+            padding: 12px 14px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 8px;
             margin-bottom: 8px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-size: 13px;
         }
-        .queue-item .user { color: #4ecdc4; }
-        .queue-item .time { color: #666; font-size: 11px; }
+        .queue-item .user { color: #4ecdc4; font-weight: 500; }
+        .queue-item .time { color: #555; font-size: 11px; }
         .logs {
-            background: #0d1117;
-            border-radius: 10px;
-            padding: 15px;
-            height: 350px;
+            background: #0a0d12;
+            border-radius: 12px;
+            padding: 16px;
+            height: 380px;
             overflow-y: auto;
-            font-family: 'Courier New', monospace;
+            font-family: 'Consolas', 'Monaco', monospace;
             font-size: 12px;
+            line-height: 1.6;
         }
-        .log-entry { margin: 3px 0; }
-        .log-time { color: #555; }
+        .logs::-webkit-scrollbar { width: 6px; }
+        .logs::-webkit-scrollbar-track { background: transparent; }
+        .logs::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+        .log-entry { margin: 2px 0; }
+        .log-time { color: #444; }
         .log-SUCCESS { color: #6bcb77; }
         .log-ERROR { color: #ff6b6b; }
         .log-WARNING { color: #ffd93d; }
         .log-INFO { color: #58a6ff; }
         .history-item {
-            padding: 12px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
+            padding: 14px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 10px;
             margin-bottom: 10px;
             font-size: 13px;
         }
         .history-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
-        .history-user { color: #4ecdc4; font-weight: bold; }
-        .history-time { color: #666; font-size: 11px; }
-        .history-stats { display: flex; gap: 15px; }
+        .history-user { color: #4ecdc4; font-weight: 600; }
+        .history-time { color: #555; font-size: 11px; }
+        .history-stats { display: flex; gap: 16px; }
+        .history-stats span { font-size: 12px; }
         .history-stats .success { color: #6bcb77; }
         .history-stats .failed { color: #ff6b6b; }
-        .empty-msg { color: #555; text-align: center; padding: 20px; font-size: 13px; }
+        .empty-msg { color: #444; text-align: center; padding: 25px; font-size: 13px; }
+        .footer { text-align: center; margin-top: 30px; color: #444; font-size: 11px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>자동 발권 시스템 <span class="demo-badge" id="demoBadge">DEMO</span></h1>
-        <p class="subtitle">Playwright 기반 | 클라우드 배포 | 다중 사용자 지원</p>
+        <h1>자동 발권 시스템 <span class="demo-badge">DEMO</span></h1>
+        <p class="subtitle">클라우드 배포 | 다중 사용자 지원 | 24시간 운영</p>
         
         <div class="grid">
             <div>
@@ -354,7 +315,7 @@ HTML_TEMPLATE = '''
                         <small>* 고객 정보는 마이리얼트립에서 자동으로 가져옵니다</small>
                     </div>
                     
-                    <button class="btn btn-primary" id="submitBtn" onclick="submitTask()">
+                    <button class="btn btn-primary" onclick="submitTask()">
                         작업 요청
                     </button>
                 </div>
@@ -378,10 +339,14 @@ HTML_TEMPLATE = '''
                 <h2>실시간 로그</h2>
                 <div class="logs" id="logs">
                     <div class="log-entry log-INFO">
-                        <span class="log-time">[시스템]</span> 클라우드 서버 준비 완료
+                        <span class="log-time">[시스템]</span> 클라우드 서버 준비 완료 - 작업 요청을 기다리는 중...
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div class="footer">
+            Powered by Railway | Auto Issue System v1.0
         </div>
     </div>
     
@@ -421,7 +386,6 @@ HTML_TEMPLATE = '''
                     }
                     
                     document.getElementById('queueCount').textContent = data.queue_count;
-                    document.getElementById('demoBadge').style.display = data.demo_mode ? 'inline-block' : 'none';
                     
                     const queueList = document.getElementById('queueList');
                     if (data.queue.length > 0) {
@@ -489,8 +453,7 @@ def health():
 # ========== 메인 ==========
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    print(f"\n[Railway] Auto Issue System")
+    print(f"[Railway] Auto Issue System")
     print(f"[INFO] Server running on port {port}")
-    print(f"[INFO] Demo mode: {status.demo_mode}")
     
     app.run(host='0.0.0.0', port=port, debug=False, threaded=True)

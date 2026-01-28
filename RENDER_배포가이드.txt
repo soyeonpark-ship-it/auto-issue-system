@@ -1,0 +1,64 @@
+# Render.com 배포 가이드
+# Vercel과 비슷하지만 Python + Selenium 완벽 지원!
+# 무료 플랜으로 충분히 사용 가능
+
+## 1단계: GitHub에 코드 올리기 (3분)
+
+# GitHub에 새 Repository 생성
+# https://github.com/new
+
+# Repository 이름: auto-issue-system
+# Public으로 설정
+
+# 현재 폴더를 GitHub에 업로드:
+git init
+git add .
+git commit -m "자동 발권 시스템"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/auto-issue-system.git
+git push -u origin main
+
+
+## 2단계: Render.com 배포 (2분)
+
+# 1. https://render.com 접속
+# 2. "Sign Up" → GitHub 계정으로 가입
+# 3. "New +" → "Web Service" 클릭
+# 4. GitHub Repository 연결
+#    - "auto-issue-system" 선택
+# 5. 설정:
+#    Name: auto-issue-system
+#    Region: Singapore (가장 가까움)
+#    Branch: main
+#    Runtime: Python 3
+#    Build Command: pip install -r requirements.txt
+#    Start Command: gunicorn final_web_dashboard:app
+#    Instance Type: Free
+# 6. "Create Web Service" 클릭
+
+
+## 3단계: 완료! (자동 배포)
+
+# 배포가 완료되면 URL이 생성됩니다:
+# https://auto-issue-system.onrender.com
+
+# 이 URL을 팀원들에게 공유하면 끝!
+
+
+## 무료 플랜 제약사항:
+# - 15분 동안 요청 없으면 sleep 모드
+# - 첫 접속 시 30초 정도 로딩
+# - 월 750시간 무료 (충분함)
+
+## 장점:
+# ✅ 완전 무료
+# ✅ 고정 URL
+# ✅ HTTPS 자동
+# ✅ Selenium 완벽 지원
+# ✅ 자동 배포 (GitHub push만 하면 됨)
+# ✅ 전 세계 어디서나 접속
+
+
+## 주의사항:
+# Render는 Selenium용 Chrome이 자동 설치되지 않습니다.
+# 아래 파일을 추가로 만들어야 합니다.

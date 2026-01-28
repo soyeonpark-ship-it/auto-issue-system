@@ -1,0 +1,33 @@
+flowchart TD
+    Start([여행자 결제 시작]) --> CheckAccount{LAFC 티켓마스터<br/>계정 보유 여부}
+    
+    CheckAccount -->|있음| InputExisting[기존 계정 정보 입력<br/>- 계정주 이름<br/>- 이메일 주소]
+    CheckAccount -->|없음| InputNew[가입할 정보 입력<br/>- 이름<br/>- 이메일 주소]
+    
+    InputExisting --> Payment[결제 진행]
+    InputNew --> Payment
+    
+    Payment --> Issued[마리트 발권]
+    
+    Issued --> EmailReceive[이메일로 티켓 도착]
+    
+    EmailReceive --> AcceptBtn[고객: ACCEPT 버튼 클릭]
+    
+    AcceptBtn --> Login[티켓마스터 계정<br/>로그인 안내]
+    
+    Login --> ViewTicket[티켓 확인 가능]
+    
+    ViewTicket --> ShowBarcode[티켓 바코드 표시]
+    
+    ShowBarcode --> OnSite[현장 도착]
+    
+    OnSite --> Scan[바코드 스캔]
+    
+    Scan --> Entry([입장 완료])
+    
+    style Start fill:#e1f5ff
+    style Entry fill:#d4edda
+    style CheckAccount fill:#fff3cd
+    style AcceptBtn fill:#f8d7da
+    style Payment fill:#d1ecf1
+    style Scan fill:#d1ecf1

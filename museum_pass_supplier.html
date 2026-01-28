@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파리 뮤지엄 패스 공급사 포털</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .header {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            color: white;
+        }
+        .header h1 {
+            font-size: 24px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        button {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin-top: 10px;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .hidden {
+            display: none;
+        }
+        .success-result {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 5px solid #4caf50;
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .voucher-code {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            margin: 15px 0;
+            text-align: center;
+            letter-spacing: 3px;
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .info-item {
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+        }
+        .info-label {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            font-weight: 600;
+            color: #333;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #667eea;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .test-note {
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff3cd;
+            border-radius: 5px;
+            color: #856404;
+            font-size: 13px;
+        }
+        .pass-type-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        .badge-2day {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+        .badge-4day {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+        .badge-6day {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+    </style>
+</head>
+<body>
+    <!-- 로그인 화면 -->
+    <div id="login-page">
+        <div class="header">
+            <h1>Paris Museum Pass - 공급사 포털</h1>
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="logo">PARIS MUSEUM</div>
+                <h2>로그인</h2>
+                <form onsubmit="login(event)">
+                    <div class="form-group">
+                        <label for="username">아이디:</label>
+                        <input type="text" id="username" name="username" placeholder="museum_partner" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">비밀번호:</label>
+                        <input type="password" id="password" name="password" placeholder="paris2024" required>
+                    </div>
+                    <button type="submit">로그인</button>
+                    <div class="test-note">
+                        테스트 계정: museum_partner / paris2024
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 발권 화면 -->
+    <div id="issue-page" class="hidden">
+        <div class="header">
+            <h1>Paris Museum Pass - 바우처 발급</h1>
+        </div>
+        <div class="container">
+            <div class="card">
+                <h2>뮤지엄 패스 바우처 발급</h2>
+                <form id="issue-form" onsubmit="issueVoucher(event)">
+                    <div class="form-group">
+                        <label for="customerName">고객명 (영문 이름):</label>
+                        <input type="text" id="customerName" name="customerName" 
+                               placeholder="HONG GILDONG" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">이메일 주소:</label>
+                        <input type="email" id="email" name="email" 
+                               placeholder="customer@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="passType">패스 종류:</label>
+                        <select id="passType" name="passType" required>
+                            <option value="">선택하세요</option>
+                            <option value="2DAY">2일권 (Paris Museum Pass 2 Days)</option>
+                            <option value="4DAY">4일권 (Paris Museum Pass 4 Days)</option>
+                            <option value="6DAY">6일권 (Paris Museum Pass 6 Days)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantity">수량:</label>
+                        <input type="number" id="quantity" name="quantity" 
+                               min="1" max="10" value="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="visitDate">방문 예정일 (선택):</label>
+                        <input type="date" id="visitDate" name="visitDate">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">특이사항 (선택):</label>
+                        <textarea id="notes" name="notes" rows="3" 
+                                  placeholder="특별한 요청사항이 있으면 입력하세요"></textarea>
+                    </div>
+                    
+                    <button type="submit" id="issueBtn">바우처 발급 및 이메일 발송</button>
+                </form>
+                
+                <!-- 발급 결과 -->
+                <div class="success-result hidden" id="successResult">
+                    <h3 style="color: #2e7d32; margin-bottom: 15px; text-align: center;">
+                        바우처 발급 완료!
+                    </h3>
+                    <div class="voucher-code" id="voucherCode"></div>
+                    <p style="text-align: center; color: #666; margin-top: 10px;">
+                        위 바우처 코드가 고객 이메일로 발송되었습니다.
+                    </p>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">고객명</div>
+                            <div class="info-value" id="resultCustomer"></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">이메일</div>
+                            <div class="info-value" id="resultEmail"></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">패스 종류</div>
+                            <div class="info-value" id="resultPassType"></div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">수량</div>
+                            <div class="info-value" id="resultQuantity"></div>
+                        </div>
+                        <div class="info-item" style="grid-column: 1 / -1;">
+                            <div class="info-label">발급 일시</div>
+                            <div class="info-value" id="resultTime"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function login(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username === 'museum_partner' && password === 'paris2024') {
+                document.getElementById('login-page').classList.add('hidden');
+                document.getElementById('issue-page').classList.remove('hidden');
+            } else {
+                alert('로그인 실패!\n테스트 계정: museum_partner / paris2024');
+            }
+        }
+        
+        function issueVoucher(event) {
+            event.preventDefault();
+            
+            // 입력값 가져오기
+            const customerName = document.getElementById('customerName').value;
+            const email = document.getElementById('email').value;
+            const passType = document.getElementById('passType').value;
+            const quantity = document.getElementById('quantity').value;
+            const visitDate = document.getElementById('visitDate').value;
+            
+            if (!passType) {
+                alert('패스 종류를 선택해주세요!');
+                return;
+            }
+            
+            // 버튼 비활성화
+            const button = document.getElementById('issueBtn');
+            button.disabled = true;
+            button.textContent = '바우처 발급 중... (이메일 발송 중)';
+            
+            // 발급 처리 시뮬레이션 (2초 딜레이)
+            setTimeout(() => {
+                // 바우처 코드 생성
+                const voucherCode = 'PMP-' + passType + '-' + Date.now().toString().slice(-6);
+                
+                // 패스 종류 텍스트
+                const passTypeText = {
+                    '2DAY': '2일권',
+                    '4DAY': '4일권',
+                    '6DAY': '6일권'
+                }[passType];
+                
+                // 현재 시간
+                const now = new Date();
+                const timeString = now.toLocaleString('ko-KR');
+                
+                // 결과 표시
+                document.getElementById('voucherCode').textContent = voucherCode;
+                document.getElementById('resultCustomer').textContent = customerName;
+                document.getElementById('resultEmail').textContent = email;
+                document.getElementById('resultPassType').innerHTML = 
+                    `<span class="pass-type-badge badge-${passType.toLowerCase()}">${passTypeText}</span>`;
+                document.getElementById('resultQuantity').textContent = quantity + '매';
+                document.getElementById('resultTime').textContent = timeString;
+                
+                document.getElementById('successResult').classList.remove('hidden');
+                
+                // 버튼 복구
+                button.disabled = false;
+                button.textContent = '바우처 발급 및 이메일 발송';
+                
+                // 스크롤
+                document.getElementById('successResult').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+                
+                // 2초 후 폼 초기화 (자동화 봇용)
+                setTimeout(() => {
+                    document.getElementById('issue-form').reset();
+                    document.getElementById('successResult').classList.add('hidden');
+                }, 2000);
+                
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

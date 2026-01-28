@@ -1,0 +1,25 @@
+# ngrok 사용법
+# 
+# 1. ngrok 다운로드: https://ngrok.com/download
+# 2. 회원가입 (무료)
+# 3. 다운받은 ngrok.exe를 이 폴더에 복사
+# 4. 명령어 실행:
+
+# ngrok http 5000
+
+# 그러면 다음과 같은 화면이 나옵니다:
+#
+# Session Status                online
+# Account                       your_email@example.com
+# Version                       3.0.0
+# Region                        Asia Pacific (ap)
+# Forwarding                    https://abc123.ngrok.io -> http://localhost:5000
+#
+# ↑ 이 주소를 팀원들에게 공유!
+# 
+# 예: https://abc123.ngrok.io
+# 
+# 전 세계 어디서나 접속 가능!
+# 스마트폰, 집 PC, 카페에서도 접속 가능!
+
+print("ngrok 사용 가이드")

@@ -1,0 +1,128 @@
+{
+  "id": "1163952204",
+  "type": "page",
+  "ari": "ari:cloud:confluence:d9945600-944d-472c-bda2-de3cbb968d56:page/1163952204",
+  "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZDk5NDU2MDAtOTQ0ZC00NzJjLWJkYTItZGUzY2JiOTY4ZDU2OmNvbnRlbnQvMTE2Mzk1MjIwNA==",
+  "status": "current",
+  "title": "LAFC (손흥민 로스앤젤레스 풋볼 클럽)",
+  "space": {
+    "id": 816250942,
+    "ari": "ari:cloud:confluence:d9945600-944d-472c-bda2-de3cbb968d56:space/816250942",
+    "key": "AOG",
+    "alias": "aoh",
+    "name": "AICX Operations Hub",
+    "type": "knowledge_base",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/AOG/settings",
+      "metadata": "",
+      "identifiers": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "description": "",
+      "history": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=AOG",
+      "permissions": "",
+      "theme": "/rest/api/space/AOG/theme",
+      "homepage": "/rest/api/content/816251265"
+    },
+    "_links": {
+      "webui": "/spaces/aoh",
+      "self": "https://mrtcx.atlassian.net/wiki/rest/api/space/AOG"
+    }
+  },
+  "version": {
+    "by": {
+      "type": "known",
+      "accountId": "712020:172ac26e-2290-49fd-9c66-ef19b86e3539",
+      "accountType": "atlassian",
+      "email": "soyeon.park@aicx.kr",
+      "publicName": "박소연",
+      "timeZone": "Asia/Seoul",
+      "profilePicture": {
+        "path": "/wiki/aa-avatar/712020:172ac26e-2290-49fd-9c66-ef19b86e3539",
+        "width": 48,
+        "height": 48,
+        "isDefault": false
+      },
+      "displayName": "박소연",
+      "isExternalCollaborator": false,
+      "isGuest": false,
+      "locale": "ko",
+      "accountStatus": "active",
+      "_expandable": {
+        "operations": "",
+        "personalSpace": ""
+      },
+      "_links": {
+        "self": "https://mrtcx.atlassian.net/wiki/rest/api/user?accountId=712020:172ac26e-2290-49fd-9c66-ef19b86e3539"
+      }
+    },
+    "when": "2026-01-23T10:44:50.309Z",
+    "friendlyWhen": "1월 23, 2026",
+    "message": "",
+    "number": 18,
+    "minorEdit": false,
+    "ncsStepVersion": "1284",
+    "ncsStepVersionSource": "ncs-ack",
+    "confRev": "confluence$content$1163952204.93",
+    "contentTypeModified": false,
+    "_expandable": {
+      "collaborators": "",
+      "content": "/rest/api/content/1163952204"
+    },
+    "_links": {
+      "self": "https://mrtcx.atlassian.net/wiki/rest/api/content/1163952204/version/18"
+    }
+  },
+  "macroRenderedOutput": {},
+  "body": {
+    "storage": {
+      "value": "<ac:layout><ac:layout-section ac:type=\"fixed-width\" ac:breakout-mode=\"default\"><ac:layout-cell><h1 local-id=\"88ff6570-550d-4734-9aae-64f9222e900e\">LAFC 직사입 티켓 운영 가이드</h1><h2 local-id=\"121d1b39-510a-4538-a60e-7b1f1a271e7a\">📋 개요</h2><h3 local-id=\"c8d0f13b-4795-47c2-8ca2-33269a16b9dd\">상품</h3><p local-id=\"43f440a2-f08e-43cf-a49d-94139a5a46d9\">손흥민 로스앤젤레스 풋볼 클럽(LAFC) 직사입 티켓</p><h3 local-id=\"a10f18fa-a36b-456b-b624-2b128b466151\">운영 방식</h3><ul local-id=\"d4a8741c-415d-4b5f-aa53-0e09bd2a787d\"><li local-id=\"d9921ec4-3603-47c0-b09d-c6cccd4c66e1\"><p local-id=\"ba3a56cf-9435-4341-8610-ee6b47308bd9\"><strong>B2B</strong>: 파트너사에게 벌크 발권 &rarr; 파트너사가 고객에게 배부</p></li><li local-id=\"3d065e53-af55-487f-a75b-f02034108520\"><p local-id=\"8e8c7adc-fd64-4bba-bc3b-137170f8a5a2\"><strong>B2C</strong>: 마리트가 고객에게 직접 발권</p></li></ul><hr local-id=\"0101a895-eb43-461e-86c1-b23cd644a175\" /><h2 local-id=\"9b82cdf2-9064-490a-9b53-61321060c2ce\">🔑 기본 정책</h2><table data-table-width=\"760\" data-layout=\"default\" ac:local-id=\"c8baf73f-3b1b-458a-8205-02b0783a89b8\"><tbody><tr ac:local-id=\"6cb93e7f-860a-48fc-af5a-15b35845fa62\"><th ac:local-id=\"dc27cb94-554e-42c3-ab35-4a02f4f7d9ec\"><p local-id=\"3f824f66-b4dd-4ef3-ae5f-c72e64b9669a\">정책</p></th><th ac:local-id=\"246a67d8-33fc-405a-b2c1-9a4afe897df9\"><p local-id=\"3f658e28-f3b4-4b92-ad2f-5cb6c90e3feb\">내용</p></th></tr><tr ac:local-id=\"903d4306-f9f9-4e9d-9c05-caec5f805762\"><td ac:local-id=\"fe10d98c-4b84-4e3f-bc56-f1a222ccf601\"><p local-id=\"d53491d0-7045-44ae-b64f-91cbdd03ef2f\">❌ 환불 </p></td><td ac:local-id=\"d6b81ef6-c178-4645-a4b9-57373d5bb342\"><p local-id=\"76249c22-6cae-40ec-a51a-0255ac2a6132\">확정 후 환불 불가 </p></td></tr><tr ac:local-id=\"fd3e2281-d99d-4fc3-8a08-2da83cfad9e9\"><td ac:local-id=\"377ee59d-939a-44ce-a8de-1fb6751273e4\"><p local-id=\"e2172830-718c-46b5-83e1-c0f153493746\">🪑 자리 배정 </p></td><td ac:local-id=\"3e1a2df4-4abb-426b-86da-4787685fc807\"><p local-id=\"a642db9a-770c-41d8-821b-96d7d1960b91\">발권 순서대로 자동 배정 (예외 요청/배정 후 변경 불가) </p><p local-id=\"c1dcb89c-d1e2-4464-be99-cc8fe8254904\">한 주문 당 수량 내에서는 연속된 좌석으로 배정</p><p local-id=\"22624640-e476-4969-aec6-4b3975f5ce70\">(1장씩 따로 구매 시 연석 배정 불가)</p></td></tr><tr ac:local-id=\"83dc26fb-8604-4f4b-878d-9620ecd86ba6\"><td ac:local-id=\"ab89cbbe-4409-4744-8136-61bd5fbfcb9f\"><p local-id=\"95a72639-a932-44d8-a48a-e3f7c5d67b3a\">✅ 양도 </p></td><td ac:local-id=\"5678ffc6-42fa-4b05-8a81-91adaaffd582\"><p local-id=\"ff1f6fa0-4d58-4ba2-bc75-e381a86418b6\">고객끼리 양도 가능 </p></td></tr></tbody></table><hr local-id=\"90f3721e-5a0d-420b-a050-ba5fba57e1d5\" /><h2 local-id=\"981d9da5-8ccc-45ca-b3e0-cc426211c79b\">📝 발권 프로세스</h2><h3 local-id=\"f0486eb1-f705-4e9d-8c44-511ff8a21ceb\">1. 시트에서 예약 내역 확인</h3><ul local-id=\"22db4f23-5803-493e-93d5-8d6644cb0b62\"><li local-id=\"25f6d7fd-f987-4567-8ce3-16280f14291d\"><p local-id=\"6858342b-ad49-427a-8302-61825dc3fd03\">고객 정보, 구매옵션, 예약 수량 확인</p></li></ul><h3 local-id=\"3c3396d9-35fd-4158-bfc8-fdbc6dee83d4\">2. 마리트 확정 처리</h3><ul local-id=\"2fb06acd-d490-44d9-b636-12ebda37b721\"><li local-id=\"d3655fab-c61f-42aa-b696-3dc76973d228\"><p local-id=\"28e851d2-3cfb-4f9e-937f-2e421bc30aaf\">확정대기 &rarr; 확정</p></li><li local-id=\"e5e2614d-22b4-43fd-a435-1a2a723934d7\"><p local-id=\"a0608136-55b9-4d06-8a16-70f908640ba2\">확정을 먼저 눌러주는 이유</p></li><li local-id=\"bd146ae9-ba65-496d-85c9-cc33137252c8\"><p local-id=\"8d85951a-dfea-4d6e-9845-42871a78d595\">확정대기 상태에서 여행자 취소해버리면 우리가 수동 발권하는 도중일 수 있으니 먼저 확정을 함</p><ul local-id=\"b3218a20-8405-4f8c-b98b-6afd792c1834\"><li local-id=\"1439e63b-1873-49e6-b331-d0c4e383d9c2\"><p local-id=\"8052d922-112d-4256-a459-ae3b8099e459\">티켓 마스터에 존재하는 재고만큼 상품에 재고 업로드 됨</p></li><li local-id=\"3483f71e-9933-43b4-a88e-6744ba919125\"><p local-id=\"9bb7d4ad-283b-41c8-9e8b-67f1e7d7153f\">다만 티켓마스터 사이트 접속 시 VPN OFF 가 필요하여 매니저 페이지 확정 후 처리</p></li><li local-id=\"0a045105-e020-48fa-923e-76d5a906e927\"><p local-id=\"27b5ac01-c221-4a70-a217-d3ba484075eb\">B2C 배정 시 연석 지정 불가한 경우</p><ul local-id=\"244d2339-1394-4762-80b2-61aebfb50ff9\"><li local-id=\"4ef32a35-b958-4056-a39f-ecd3949b758f\"><p local-id=\"839b4505-cbf3-48fb-aa50-f73fbd2a218e\">확정대기 상태로 두고</p></li><li local-id=\"102f3aa7-0ed0-4f5b-b00e-3c9135787e7d\"><p local-id=\"cbd066b7-6b99-4da9-bbfc-47214de17b6a\">여행자 확정까지 최대 ~1일 소요 안내</p></li><li local-id=\"ce6f3d5a-7164-4150-ae1b-0673b42865c1\"><p local-id=\"c2672c63-dcc4-42e6-aa02-e76e04238e00\">재고 이동 관련하여 사업실 조유진,김정환,노경현,이유진 님 문의</p></li><li local-id=\"9d983048-9980-4f83-8cd6-3641193af121\"><p local-id=\"9096fce6-d0d2-40ac-af9f-8c8cecedea60\">확정 또는 취소 처리</p></li></ul></li></ul></li></ul><h3 local-id=\"b19a77ea-aa6d-466b-a7cd-18f91141ef42\">3. LAFC 사이트 발권</h3><ul local-id=\"64b95991-71bf-4dfd-9319-3980fee8c65c\"><li local-id=\"98668645-68bc-402e-b3ea-375c3f24818b\"><p local-id=\"6b60cbff-6d3c-492b-89d5-0a3fb884a6b3\">발권 사이트 접속 &rarr; 로그인 &rarr; 발권 실행</p><ul local-id=\"1c30bf5f-ce72-48c4-b384-7b1b81c1f21e\"><li local-id=\"4d7fbe84-dd3e-43ef-a55a-e5a633f569f4\"><p local-id=\"eaba51db-dce4-4805-ba40-ff947a27c941\">발권 실행 전 발권 시트 재고 트래킹 영역에서 B2B, B2C 티켓 좌석 확인 필요 상태값 정보 기입</p></li></ul></li><li local-id=\"52c52db7-1ce9-4489-a068-6378a885fa9a\"><p local-id=\"6bb41d05-9103-4be2-bb54-0ec9089952c8\">티켓 전달</p></li></ul><h3 local-id=\"525e338b-52e9-4205-a573-b6f97836cb53\">4. 좌석 정보 기입</h3><ul local-id=\"5c3d48f4-b7fc-4627-8b7e-e09044d45634\"><li local-id=\"e31eaaba-1c55-47f9-810c-bd2b5bfec85c\"><p local-id=\"7e23f0d8-4e44-4385-bd5e-3e251f61c6d1\">시트에 기록: 티켓번호, Section, Row, Seat, 발권 일시, 발송여부, 확정여부 기입</p></li></ul><p local-id=\"4e6ba619-a360-4d93-b7e2-6854c9989af8\"><strong>상태 흐름</strong>: 예약접수 &rarr; 확정대기 &rarr; 확정완료 &rarr; 발권진행중 &rarr; 발권완료 &rarr; 티켓전달완료</p><p local-id=\"48b511b7-fce8-4ae4-8c2d-29ada09736fe\" /><h2 local-id=\"440adda1-c74e-40b5-b8b6-3e560054d139\">🔗 참고자료</h2><h3 local-id=\"b6438d23-dcfc-48ef-8d2e-7ee0e5b24e87\">필수 시트</h3><ul local-id=\"6f85a903-4fff-477e-854d-c94fff86053d\"><li local-id=\"db834a29-9b32-4082-a810-80c960ef7a3e\"><p local-id=\"e38a854e-f428-4afc-9a26-d2e986eb03c4\">📊 <a href=\"https://docs.google.com/spreadsheets/d/1-ni8SI0_6r16tS2QwAc5X-dY_MeKdXDJT3AJgkqWcFk/edit?gid=766782155#gid=766782155\">B2B 발권 시트 - 파트너사 전용</a></p></li><li local-id=\"69318613-eff8-4ee7-80bd-b994d191662b\"><p local-id=\"2d19b654-9b2f-4fe5-b830-2f4db75834b3\">📊 <a href=\"https://docs.google.com/spreadsheets/d/1-ni8SI0_6r16tS2QwAc5X-dY_MeKdXDJT3AJgkqWcFk/edit?gid=1107036574#gid=1107036574\">B2C 발권 시트 - 일반 고객 전용</a></p></li></ul><h3 local-id=\"ede0e32e-a6df-4d89-9482-8b7f911f67f9\">가이드 문서</h3><ul local-id=\"49b724bf-12a9-43d8-964c-38c775a2e8a3\"><li local-id=\"5c718260-7f5c-4981-8522-f05eb48b5711\"><p local-id=\"b3d2003f-cddf-41f6-9898-d6aacf9ee364\">📖 <a href=\"https://docs.google.com/presentation/d/1XF2OVRKjWk0dfqn1nIpC0VwyUCwFRL-zYBz2kzxwREw/edit?slide=id.p#slide=id.p\">LAFC 수동발권 가이드 - 상세 발권 절차</a></p></li><li local-id=\"3db09863-1956-4729-865f-35063ebf05ad\"><p local-id=\"f6302201-b663-4706-b4c0-03bd9354befd\">❓ <a href=\"https://docs.google.com/spreadsheets/d/1dunk3lrSKQ-cMi1J8XF_B1eGUc7GOOHeGGqMiVn471E/edit?gid=1263566895#gid=1263566895\">LAFC 수동발권 FAQ - 문제 해결</a></p></li></ul><h3 local-id=\"05b2d6f6-3482-41f4-9cf5-b46095ad8647\">교육 자료</h3><ul local-id=\"b46ee0f0-3168-43dc-bacf-5f6281a067a3\"><li local-id=\"c927c40a-2e6b-4910-b235-365b106b1e63\"><p local-id=\"67a16894-47fc-4da8-b624-e611dc71b003\">🎥 <a href=\"https://drive.google.com/file/d/1l0faeBry1GxdRDACcwD0FiyPe8okCJYc/view?usp=drive_link\">운영방식 시연 동영상</a></p></li></ul><hr local-id=\"8ca779df-eb33-477b-840c-deec5fe9e82e\" /><h2 local-id=\"8346a165-f5f6-489b-93e3-e8ad4b983088\">⚠️ 주의사항</h2><ol start=\"1\" local-id=\"6a3ff5d5-327c-4b2f-b184-be0d93dd38fa\"><li local-id=\"85d85934-8ccd-42e4-b188-3d6523f2d848\"><p local-id=\"f169cd47-a8f1-47fb-b49b-857d7b55dc7f\"><strong>B2B/B2C 시트 혼용 금지</strong></p></li><li local-id=\"f2990ffc-d9b6-4320-90ee-1a42e1283451\"><p local-id=\"13aa89b2-26f9-423c-9b36-cbad0978a1ec\"><strong>확정 후 환불/변경 불가</strong> - 사전 안내 필수</p></li><li local-id=\"6c2da997-d797-43eb-aceb-4e3ff6ab06bb\"><p local-id=\"c1642307-e6bd-4356-95cb-4f99e5d40b60\"><strong>발권 순서 엄수</strong> - 접수 순서대로 처리</p></li><li local-id=\"bdcf3972-56d1-41fe-854f-b2a58b6e3c55\"><p local-id=\"dd4dccdd-1a85-439a-8fbb-aedbb7d08f18\"><strong>정보 정확성</strong> - 오류 시 재발권 불가</p></li></ol><hr local-id=\"bd62891c-c8ac-4926-a47b-7023fd6de758\" /><h3 local-id=\"f3bc3cc7-19e1-4fdd-9a45-02c3a0121aba\">마이리얼트립 담당자</h3><ul local-id=\"45198f47-8695-48ba-b533-0f7d77788268\"><li local-id=\"de9fda44-b5a7-4e60-81f3-8d8f3318192f\"><p local-id=\"2bdf8719-c971-4d6d-9bf1-f8a9641ac6dd\">상품 관련 컨택 : 미주태평양팀 김정환, 노경현, 이유진(APOC) -동명이인으로 슬랙 이름옆 APOC 기입된 유진님 </p></li><li local-id=\"4e596cea-b62e-49b2-ba5e-0ac0569807a9\"><p local-id=\"5a94bc5a-c0fe-410d-aaac-a049ed2b2c2a\">직사입 재고 관련 컨택 : 커머스팀 조유진 </p></li></ul><p local-id=\"a7d4ff4f-7a68-4f3f-8c83-c62f524c418b\" /><hr local-id=\"76a0870d-1248-4ae7-9150-e0047650ee98\" /><p local-id=\"a095132b-6718-4fd1-bcee-dadd77d4b603\" /><p local-id=\"fb2c755a-89d7-45a2-aa83-d9111137b9d4\" /></ac:layout-cell></ac:layout-section><ac:layout-section ac:type=\"two_equal\" ac:breakout-mode=\"wide\" ac:breakout-width=\"760\" ac:local-id=\"61c7e2a6-b5f1-4f6d-a7e2-6a1fd0a2f3e0\"><ac:layout-cell ac:local-id=\"7d2de217-6b2e-4dad-8e7f-14a36fe090b2\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"2720\" ac:original-width=\"848\" ac:custom-width=\"true\" ac:local-id=\"f995ecff-16cf-4545-a4da-76ed60169b9d\" ac:alt=\"LAFC 구매.png\" ac:width=\"356\"><ri:attachment ri:filename=\"LAFC 구매.png\" ri:version-at-save=\"4\" /></ac:image><p local-id=\"96c20f5b-f58a-463a-a6c7-1cb468c98835\" /></ac:layout-cell><ac:layout-cell ac:local-id=\"1860cff4-fa8b-4fdb-bf5b-d9a432e95fa4\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"2349\" ac:original-width=\"623\" ac:custom-width=\"true\" ac:local-id=\"5a02691d-7b59-482a-934f-6f0918bccc7a\" ac:alt=\"수동발권V2.png\" ac:width=\"356\"><ri:attachment ri:filename=\"수동발권V2.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"5129068a-7d77-4e94-a6e2-9ca5dabf4d71\" /><p local-id=\"1084e2a4-7c63-4c6c-a7ae-e1dfe62da840\" /></ac:layout-cell></ac:layout-section></ac:layout>",
+      "representation": "storage",
+      "embeddedContent": [],
+      "_expandable": {
+        "content": "/rest/api/content/1163952204"
+      }
+    },
+    "_expandable": {
+      "editor": "",
+      "atlas_doc_format": "",
+      "view": "",
+      "export_view": "",
+      "styled_view": "",
+      "dynamic": "",
+      "editor2": "",
+      "anonymous_export_view": ""
+    }
+  },
+  "extensions": {
+    "position": 24
+  },
+  "_expandable": {
+    "childTypes": "",
+    "container": "/rest/api/space/AOG",
+    "schedulePublishInfo": "",
+    "metadata": "",
+    "operations": "",
+    "schedulePublishDate": "",
+    "children": "/rest/api/content/1163952204/child",
+    "restrictions": "/rest/api/content/1163952204/restriction/byOperation",
+    "history": "/rest/api/content/1163952204/history",
+    "ancestors": "",
+    "draftVersion": "",
+    "descendants": "/rest/api/content/1163952204/descendant"
+  },
+  "_links": {
+    "editui": "/pages/resumedraft.action?draftId=1163952204",
+    "webui": "/spaces/aoh/pages/1163952204/LAFC",
+    "edituiv2": "/spaces/AOG/pages/edit-v2/1163952204",
+    "context": "/wiki",
+    "self": "https://mrtcx.atlassian.net/wiki/rest/api/content/1163952204",
+    "tinyui": "/x/TIBgRQ",
+    "collection": "/rest/api/content",
+    "base": "https://mrtcx.atlassian.net/wiki"
+  }
+}

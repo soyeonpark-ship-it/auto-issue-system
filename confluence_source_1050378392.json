@@ -1,0 +1,127 @@
+{
+  "id": "1050378392",
+  "type": "page",
+  "ari": "ari:cloud:confluence:d9945600-944d-472c-bda2-de3cbb968d56:page/1050378392",
+  "base64EncodedAri": "YXJpOmNsb3VkOmNvbmZsdWVuY2U6ZDk5NDU2MDAtOTQ0ZC00NzJjLWJkYTItZGUzY2JiOTY4ZDU2OmNvbnRlbnQvMTA1MDM3ODM5Mg==",
+  "status": "current",
+  "title": "한인민박 상품 등록",
+  "space": {
+    "id": 816250942,
+    "ari": "ari:cloud:confluence:d9945600-944d-472c-bda2-de3cbb968d56:space/816250942",
+    "key": "AOG",
+    "alias": "aoh",
+    "name": "AICX Operations Hub",
+    "type": "knowledge_base",
+    "status": "current",
+    "_expandable": {
+      "settings": "/rest/api/space/AOG/settings",
+      "metadata": "",
+      "identifiers": "",
+      "roles": "",
+      "icon": "",
+      "typeSettings": "",
+      "description": "",
+      "history": "",
+      "operations": "",
+      "lookAndFeel": "/rest/api/settings/lookandfeel?spaceKey=AOG",
+      "permissions": "",
+      "theme": "/rest/api/space/AOG/theme",
+      "homepage": "/rest/api/content/816251265"
+    },
+    "_links": {
+      "webui": "/spaces/aoh",
+      "self": "https://mrtcx.atlassian.net/wiki/rest/api/space/AOG"
+    }
+  },
+  "version": {
+    "by": {
+      "type": "known",
+      "accountId": "712020:d63ace83-8543-4859-83e4-2719d68a88af",
+      "accountType": "atlassian",
+      "email": "",
+      "publicName": "김수현",
+      "profilePicture": {
+        "path": "/wiki/aa-avatar/712020:d63ace83-8543-4859-83e4-2719d68a88af",
+        "width": 48,
+        "height": 48,
+        "isDefault": false
+      },
+      "displayName": "김수현",
+      "isExternalCollaborator": false,
+      "isGuest": false,
+      "locale": "ko",
+      "accountStatus": "active",
+      "_expandable": {
+        "operations": "",
+        "personalSpace": ""
+      },
+      "_links": {
+        "self": "https://mrtcx.atlassian.net/wiki/rest/api/user?accountId=712020:d63ace83-8543-4859-83e4-2719d68a88af"
+      }
+    },
+    "when": "2025-12-22T07:29:42.572Z",
+    "friendlyWhen": "12월 22, 2025",
+    "message": "",
+    "number": 5,
+    "minorEdit": false,
+    "ncsStepVersion": "2900",
+    "ncsStepVersionSource": "ncs-ack",
+    "confRev": "confluence$content$1050378392.24",
+    "contentTypeModified": false,
+    "_expandable": {
+      "collaborators": "",
+      "content": "/rest/api/content/1050378392"
+    },
+    "_links": {
+      "self": "https://mrtcx.atlassian.net/wiki/rest/api/content/1050378392/version/5"
+    }
+  },
+  "macroRenderedOutput": {},
+  "body": {
+    "storage": {
+      "value": "<h2 local-id=\"ff4bc9f8-dfde-4317-96a6-54304bc85183\"><strong>⭕ 상품 등록 방법</strong></h2><table data-table-width=\"1158\" data-layout=\"center\" ac:local-id=\"17f424a6-8595-4187-ac06-d4a2a1f72505\"><colgroup><col style=\"width: 55.0px;\" /><col style=\"width: 637.0px;\" /><col style=\"width: 465.0px;\" /></colgroup><tbody><tr ac:local-id=\"cb599ce5-5388-4012-a417-f65f86015389\"><th data-highlight-colour=\"#f0f1f2\" ac:local-id=\"4f054a4d-5b70-4509-a251-d212385a44e2\"><p local-id=\"6bc45fbe-06eb-476b-b8c8-dcc53a839fad\" style=\"text-align: center;\"><strong>순서</strong></p></th><th data-highlight-colour=\"#f0f1f2\" ac:local-id=\"126ecad1-0608-4f15-a259-468d9f031609\"><p local-id=\"d6b6fc7c-e344-4ecf-858d-d4df3e4fe7d8\"><strong>상세 화면</strong></p></th><th data-highlight-colour=\"#f0f1f2\" ac:local-id=\"7431bc48-ff9f-409c-831f-0e6716d03207\"><p local-id=\"187d83a0-05e1-439e-9a77-a02a40eca4fc\"><strong>상세 내용</strong></p></th></tr><tr ac:local-id=\"612b5f70-f64f-4aba-88d9-ec0f0a44e90c\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"709ef521-4ff0-4b21-9855-c65479461897\"><p local-id=\"c09352de-ff51-4e09-8c17-8facd73cc6a9\" style=\"text-align: center;\"><strong>1</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"82b1a206-37d0-495b-b152-bb3a1c169a69\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"850\" ac:original-width=\"1864\" ac:custom-width=\"true\" ac:local-id=\"e458f2a0-a0c1-4df1-b8a8-3c6d463195ba\" ac:alt=\"image-20251212-063111.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-063111.png\" ri:version-at-save=\"1\" /></ac:image></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"5bf8c70e-351b-451d-97e7-2377bb460c65\"><h3 local-id=\"1eb9963f-ca93-4e09-a397-4d880a77e043\"><strong>매니저 &gt; 파트너</strong></h3><ul local-id=\"64be3115-35a8-4712-b7e4-e82efdc0cc6d\"><li local-id=\"f81f58d4-4dc0-4813-a57f-396c6f411689\"><p local-id=\"3104f1f4-efcb-48b3-b25a-acec6deba4d4\">상품 등록이 필요한 파트너 ID를 입력하여 파트너 계정을 조회해 주세요.</p></li></ul></td></tr><tr ac:local-id=\"1708e3c9-bc6e-4ae3-bc6c-d325a5975a16\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"f055bffd-5695-4acf-ac02-289ab78c1dc7\"><p local-id=\"fd1cb5aa-0344-43af-96b8-454dc3d9d0a6\" style=\"text-align: center;\"><strong>2</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"64d02b11-c32f-48bd-8042-7a3f76bb7a40\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"858\" ac:original-width=\"1855\" ac:custom-width=\"true\" ac:local-id=\"8d94aad5-88ed-42a9-b428-71f76a36d9d3\" ac:alt=\"image-20251212-063427.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-063427.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"3a3c8eb9-7b65-4739-acb5-69a79e4ca254\" /></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"9fb420b5-5832-416e-ba5c-f76aeac80199\"><h3 local-id=\"117aa5ef-6ee6-45ce-9438-9924bc508cb6\"><strong>매니저 &gt; 파트너</strong></h3><ul local-id=\"29561099-075f-4c27-bed3-2c064abd8974\"><li local-id=\"0a477379-d44a-457c-aee3-503aa6e6f68b\"><p local-id=\"0660b54d-fd99-4042-bbb4-8d62a600f6af\">파트너 계정이 조회되면 [파트너 정보 수정]을 클릭하여 스테이넷에 접속해 주세요.</p></li></ul></td></tr><tr ac:local-id=\"50b11529-1dbe-412d-926f-98b29072d312\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"d16214b3-a6dc-4e73-ad04-db1c82239d44\"><p local-id=\"4498aeee-abda-4403-b875-933cf92a56a4\" style=\"text-align: center;\"><strong>3</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"cf88b7b2-d02b-4f4b-8c03-7765f616f956\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"789\" ac:original-width=\"1390\" ac:custom-width=\"true\" ac:local-id=\"227b1385-8fa9-40ca-b96a-c08cd8791db4\" ac:alt=\"image-20251212-063556.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-063556.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"4f94ca0c-4acb-41f9-8631-a60a3c1ac5ee\" /></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"410ec470-772e-4c25-92e1-259c2f0b13a5\"><h3 local-id=\"3e6576c2-b086-465a-a4d9-7b29cdd0cc71\"><strong>상품 등록하기</strong></h3><ul local-id=\"9d59fed7-9d84-4c15-94c9-1ccec7d8109e\"><li local-id=\"ca56564f-5915-47f4-bcab-ff7bc47a5900\"><p local-id=\"f51d6d84-1a3e-40fd-8454-8f4b911d3e1f\">상품 &gt; 호텔/리조트/펜션/한인민박 탭에서 [상품 등록]을 클릭해 주세요.</p></li></ul></td></tr><tr ac:local-id=\"45cb91b2-75ae-4372-bd94-aa8401ddf1c1\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"aac066e5-6907-4379-a326-b2241f858c5d\"><p local-id=\"1068c162-ea91-4a9e-96fa-80858b56495d\" style=\"text-align: center;\"><strong>4</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"bf383c31-e35d-429d-aad3-1754b26cca6b\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"831\" ac:original-width=\"1212\" ac:custom-width=\"true\" ac:local-id=\"df192684-63bb-4c14-bd76-a6bfd43d2f1c\" ac:alt=\"image-20251212-064011.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-064011.png\" ri:version-at-save=\"1\" /></ac:image></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"0120c80d-86b8-4c79-8ea4-c3b755bc8d8e\"><h3 local-id=\"cf7ff498-f202-4d63-89c9-510efb20f252\"><strong>상품 등록하기</strong></h3><ul local-id=\"ce4363c8-e0c7-4592-a54f-826f256f8505\"><li local-id=\"5a027937-6432-486b-9ae9-fc3eac17b539\"><p local-id=\"da899c8c-65c6-49b2-adad-161604b01a7e\">숙소 정보 탭에서 숙소 유형을 [한인민박]으로 선택해 주세요.</p></li><li local-id=\"81aa79bd-4b5c-4205-aea0-36c0361c58c8\"><p local-id=\"c71f9587-1c92-4128-b575-eb9c65309ff5\">기술서에 기재된 정보를 토대로 각 항목에 정보를 기재 및 설정 해 주세요. (미기재 항목은 패스)</p><ul local-id=\"5845a39c-4210-4a74-986a-1bf41d8df66b\"><li local-id=\"88d95fce-fb06-460d-8897-4d8750b41f64\"><p local-id=\"5ee151e5-35c9-4f68-9297-8ae91b86c063\">숙소 이름</p></li><li local-id=\"f709e8a0-ad4e-420d-afa8-b96493c3c3b3\"><p local-id=\"d3205060-6411-4c20-93e7-2948e167d25e\">주소</p></li><li local-id=\"02de5f0d-9ddc-4a0c-a40a-adf92cc4c63c\"><p local-id=\"3d34ef5f-00df-4012-b5c0-1426c9f3fb1f\">위치 설명</p></li><li local-id=\"a511f20a-44de-416a-8bde-6ca80bf1a3c2\"><p local-id=\"fbfc020c-c65a-4ba3-a35c-35e20dbe4f87\">체크인 시간</p><ul local-id=\"d0bbb014-1735-4e83-ac4f-85bb4184a240\"><li local-id=\"a511f20a-44de-416a-8bde-6ca80bf1a3c2\"><p local-id=\"8e0acfb0-0f51-4289-bbec-467e04ee92e9\">기술서 미 기재 시 타 플랫폼 사이트 정보 확인 후 기재</p></li></ul></li><li local-id=\"f10b68ba-7b78-4a3c-9312-7fe4cc967287\"><p local-id=\"92e992c7-a4c1-4548-b5f7-fa5aecfe3b55\">체크아웃 시간</p><ul local-id=\"aff78e99-962d-404d-af41-0a3aa594e045\"><li local-id=\"99105643-76ac-4f3c-bf8f-322e3e0fb7d2\"><p local-id=\"faf06838-5187-418b-bc6f-0929e782ba5b\">기술서 미 기재 시 타 플랫폼 사이트 정보 확인 후 기재</p></li></ul></li><li local-id=\"b019370d-4637-47bd-8c91-93d25c35fce9\"><p local-id=\"861857e6-b3e1-4cae-ba52-49e1928fd0c6\">체크인 마감 시간(별도 있을 경우)</p></li><li local-id=\"96d4bbbe-4b18-4e15-8d58-a54d6a40cae2\"><p local-id=\"814e353b-42b2-4bdb-8be8-bf7e8d67d4c0\">판매 통화 및 환율</p></li><li local-id=\"48912af9-54bd-4251-a734-f28f4712d4d3\"><p local-id=\"8ac3e610-8141-49a9-add1-9f95bd25dfa8\">어린이 정책</p></li><li local-id=\"85646ada-768e-45eb-9930-8ec168e8130c\"><p local-id=\"c5b8da40-d76d-4b5d-bba6-592acc84e462\">숙소 정보</p></li><li local-id=\"82c9229e-e65d-4f98-b51d-6f085f5d0d7d\"><p local-id=\"71f209d8-ec70-4bec-8509-173f11d8591e\">숙소 사진</p><ul local-id=\"af43f8e5-3b1d-411f-ad5b-a65a072803f5\"><li local-id=\"82c9229e-e65d-4f98-b51d-6f085f5d0d7d\"><p local-id=\"0999405c-02ad-4304-ab91-be35eeeefcae\">숙소 사진은 타 플랫폼 사이트에서 다운로드 후 업로드 </p></li></ul></li><li local-id=\"20bdc3d2-f6bd-4b30-b74e-1ff94c4fd028\"><p local-id=\"3c05dc1b-860b-47c6-93a3-0c7ee9afbb90\">부대시설</p></li><li local-id=\"c584f820-d16d-4412-ac08-7211ecc17b73\"><p local-id=\"b2bbd344-0168-4cce-9038-6801b96f06c9\">주차 및 교통 정보</p></li><li local-id=\"d70a7dff-721e-4274-9c19-c19241bbabe1\"><p local-id=\"75340c11-f8a0-4483-bba8-76a63890aeb0\">사용 가능 언어</p></li><li local-id=\"91080c79-c0dd-45fd-a881-5d1166c2cffb\"><p local-id=\"ee652fbd-ed80-4e2f-ad06-793a0d73cc7d\">부가 서비스</p></li><li local-id=\"d8488b1a-8d05-4757-ba88-2c37c78dc931\"><p local-id=\"70cbfcb0-6d3c-4c13-b18f-f3811216a102\">기타 정보</p></li><li local-id=\"5b0cdf21-02ca-4d30-b150-49fc496e3291\"><p local-id=\"35ff2331-e632-4475-a6a0-c8b5d53bdb11\">식사 정보</p></li><li local-id=\"15973208-7628-4370-a6e3-421fdfc3a6c8\"><p local-id=\"dcf43bbc-4436-43cd-bc51-c5256cead751\">식사 추가 설명</p></li><li local-id=\"c2baee6e-3720-4f53-9e86-7d55e1a41688\"><p local-id=\"ed54c176-b9f6-4168-8536-aa853490bdae\">추가 예약 정보</p></li><li local-id=\"460da48b-dcdc-47cd-8d18-2cf07bcdc552\"><p local-id=\"05927ebb-b02c-4080-bd8d-77989df9fee2\">유튜브 주소</p></li></ul></li></ul></td></tr><tr ac:local-id=\"3802a158-8901-4975-ac46-37d178354e0c\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"ce1b9068-d3e6-4b42-b1f2-427cb19d65c3\"><p local-id=\"0a7bd6d2-ac9f-4f11-b0ff-e512ae09574a\" style=\"text-align: center;\"><strong>5</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"51b982b8-31af-4ba2-9646-4579c5ec902f\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"397\" ac:original-width=\"1308\" ac:custom-width=\"true\" ac:local-id=\"f1e0a01a-850a-495c-aa2c-dcbf8ca71048\" ac:alt=\"image-20251212-070129.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-070129.png\" ri:version-at-save=\"1\" /></ac:image></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"b821caef-bb2b-4933-9e7f-fdd2dc4bcfbf\"><h3 local-id=\"8a5bd8d2-73bd-4ed5-bd54-856eefcfabef\"><strong>상품 등록하기</strong></h3><ul local-id=\"0fa9d141-22e1-4e69-832d-80524e2c3a69\"><li local-id=\"47b253e4-eb14-4d56-a69e-12acf22ec87f\"><p local-id=\"9d6eb8c9-8925-4593-8c26-ae72e55b1f66\">객실 정보 탭에서 [객실 등록] 클릭하여 객실 생성해 주세요.</p></li></ul></td></tr><tr ac:local-id=\"1e1c46db-fc44-472e-a0c5-5878e9ce4f48\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"35f81422-1168-4a3b-9b30-c31ceac17c8e\"><p local-id=\"6be4f82d-3b83-4d2d-b9ae-bdde9f1c8d9a\" style=\"text-align: center;\"><strong>6</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"1d82be95-6205-4864-96f2-0321db5587ee\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"810\" ac:original-width=\"1191\" ac:custom-width=\"true\" ac:local-id=\"6ca5b548-fdfd-4d46-a9b7-09a7b7f17dc5\" ac:alt=\"image-20251212-070159.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-070159.png\" ri:version-at-save=\"1\" /></ac:image></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"a28c9049-38a7-4ed5-b6f4-7129fff783b2\"><h3 local-id=\"d1177aab-65e5-484f-8f24-63ecd151c05e\"><strong>상품 등록하기</strong></h3><ul local-id=\"78a990ba-4a41-4f3e-9a93-39f10c93ad6b\"><li local-id=\"6ba5e39a-b6fc-43c1-a9ec-5475420785fe\"><p local-id=\"68399e13-8fb7-4767-9872-3331482e2778\">기술서에 기재된 정보를 토대로 각 항목에 정보를 기재 및 설정 해 주세요. (미기재 항목은 패스)</p><ul local-id=\"d8e8b03b-ab5d-4d10-93b3-09847692251b\"><li local-id=\"b497dd95-47b5-4b66-8613-68c3cb212067\"><p local-id=\"887255db-3c89-45a5-85cd-7874bdff604f\">연동 여부</p></li><li local-id=\"38893e61-a80a-41ae-b9c6-4d0630d7d55c\"><p local-id=\"d8edf711-dc82-478a-9377-80a2f086b5be\">객실 이름</p></li><li local-id=\"3324ad5b-3c29-45fb-9137-6065f1bb83da\"><p local-id=\"ab0cfa3c-d16f-44f5-ac8e-a00e8b6b98a6\">객실 유형</p></li><li local-id=\"02291d78-8095-49db-a23b-441bf2ab15ea\"><p local-id=\"b220263f-548c-4619-b5c8-ed0c55e55b06\">객실 정보</p></li><li local-id=\"5624cc1e-7b0f-4e75-a530-38215f47d868\"><p local-id=\"cdbf0692-24f9-48d5-af9c-9252cb7800f9\">객실 크기</p></li><li local-id=\"afb95941-67fb-4fca-87fe-cd7a7f8dd209\"><p local-id=\"1a7657f7-b51b-4b4b-aa27-edec523bd0ea\">객실 사진</p></li><li local-id=\"923f095f-4ef0-4657-9b2d-892e0f0a8cad\"><p local-id=\"794002aa-1275-4f7c-af29-89c59c34fcba\">인원 설정</p></li><li local-id=\"4b026405-5f92-4a89-8fab-0f225044b54d\"><p local-id=\"094b30e7-dfcb-4529-aaf5-331eca4f0fed\">객실 시설</p></li></ul></li></ul></td></tr><tr ac:local-id=\"63009e51-d442-4be0-a84c-849ffd98475b\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"75167c28-2554-4721-9da9-0bea5512d3d2\"><p local-id=\"83aebb83-d79b-44ac-9285-ede23c796806\" style=\"text-align: center;\"><strong>7</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"e4272523-97c3-4d1b-b743-bf16afd739f2\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"847\" ac:original-width=\"1163\" ac:custom-width=\"true\" ac:local-id=\"c82687d9-e7de-451c-88e8-4fd5905ce7df\" ac:alt=\"image-20251212-071114.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-071114.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"da4a0cb3-3da9-405c-aafa-83cfa9c79874\" /></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"003a7af7-10cc-4186-9655-4e617831e830\"><h3 local-id=\"9dbd0315-7e96-43d2-8bbe-7f79c85aa9d4\"><strong>상품 등록하기</strong></h3><ul local-id=\"96ec49bc-c74d-487c-ba1b-7cff9f7b1882\"><li local-id=\"d648fe9a-862c-4604-a105-a9f9f4ce7d8f\"><p local-id=\"06256b94-563a-40cd-b9dd-305ae2110f92\">옵션 정보 탭에서 옵션 상품 [수정] 클릭해 주세요</p></li><li local-id=\"d00bf97b-343b-4079-a4a2-2f24cea49726\"><p local-id=\"23086637-840b-4b78-bd75-b0715d863707\">기술서에 기재된 정보를 토대로 각 항목 설정해 주세요.</p><ul local-id=\"bfb99969-7e21-4720-b3aa-d0c306eabc03\"><li local-id=\"daaad664-45c2-48dd-9550-1a639d7995de\"><p local-id=\"d2823ea4-7129-4c08-935c-81f993598333\">최소 숙박일</p></li><li local-id=\"c6763101-de61-4d4b-be26-11cb98cfb518\"><p local-id=\"7c40739a-684c-45a9-88e5-44800f09bc67\">최대 숙박일 (미기재 시 100일로 유지)</p></li></ul></li></ul></td></tr><tr ac:local-id=\"c6e28505-f8ea-44ab-922f-77c1e83fa565\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"2eb88778-fdd3-48b4-a98a-60a014ff2148\"><p local-id=\"4e24e7a6-8297-464f-b22a-05a57edbb421\" style=\"text-align: center;\"><strong>8</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"38bdbbf8-dcde-4749-a0ad-85bb40593fff\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"737\" ac:original-width=\"1141\" ac:custom-width=\"true\" ac:local-id=\"49d6d3db-466a-4802-a2d4-95edad41373d\" ac:alt=\"image-20251212-071509.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-071509.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"f2677c81-ab2a-48f7-91f1-db69b3a69c19\" /></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"9c8a84de-4ca0-4c12-8d42-61feb5abf2ea\"><h3 local-id=\"9c04cb3c-66a4-4af2-8b35-ed06eb0d174f\"><strong>상품 등록하기</strong></h3><ul local-id=\"34660d70-eb90-42fd-bac7-da84ef699b80\"><li local-id=\"74917cf3-7ee3-4a97-b836-9adf089c114b\"><p local-id=\"ad32c01a-fafa-4746-96bf-876978a8fa89\">취소환불 정책 탭에서 [취소환불 등록] 클릭 후 취소 환불 규정 등록해 주세요.</p></li></ul></td></tr><tr ac:local-id=\"61b2b291-8d85-4e14-9e40-36691fa43b37\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"ca937c0a-985c-41f0-95a4-0cf4971e14e8\"><p local-id=\"6989f987-8b10-433f-80a9-2f77c35039ed\" style=\"text-align: center;\"><strong>9</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"612e4992-3749-4ead-80bb-610c0abb7625\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"169\" ac:original-width=\"289\" ac:custom-width=\"true\" ac:local-id=\"f60213c9-dbfe-4c52-a715-506d32177fbe\" ac:alt=\"image-20251212-071720.png\" ac:width=\"289\"><ri:attachment ri:filename=\"image-20251212-071720.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"011f8c8d-148d-44b9-9a1a-72d3014cbf11\" /></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"ada18615-da75-4f6c-a0f1-64220737894c\"><h3 local-id=\"f6b8eaaf-c0b9-4ca1-99d0-8a250b23f921\"><strong>상품 등록하기</strong></h3><ul local-id=\"8f8feee4-80d8-4f3e-a8a7-30dfc98498fd\"><li local-id=\"8649b425-7c19-4262-9bf1-9a909f21acb2\"><p local-id=\"95001932-4e60-4fab-afa2-75fa5c0cacac\">취소환불 규정이 등록 후 오른쪽 하단 [상품 등록하기] &rarr; [연박할인 없이 상품 등록하기] 클릭하여 상품 등록해 주세요. </p></li></ul></td></tr><tr ac:local-id=\"f4372424-1a97-4830-97ae-958d69f8c945\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"312b03ef-ae6f-4ac9-820d-251b88134553\"><p local-id=\"47a4d084-2312-43ca-be41-f54b57fcbba0\" style=\"text-align: center;\"><strong>10</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"b5b88ef3-73b8-4ef1-afee-bca303bd01ea\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"576\" ac:original-width=\"1862\" ac:custom-width=\"true\" ac:local-id=\"ef19a8c5-8732-47dd-95fd-b1d668ad2954\" ac:alt=\"image-20251212-071912.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-071912.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"c4667742-2056-47f9-bd8d-f4290d4b432e\" /></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"b60eed1e-7fe2-48db-9279-8fefe2bd8762\"><h3 local-id=\"b6adee5b-78bc-481e-8e2b-f0447211e289\"><strong>상품 개시하기</strong></h3><ul local-id=\"48edfc5f-8176-49cb-9b5c-3d570502d793\"><li local-id=\"c0657b91-d618-4011-9e35-29dec6a13e6d\"><p local-id=\"2034d42c-dd30-4118-8f1f-bb915c1967ed\">매니저 페이지 숙소 탭에서 [Staynet 숙소 관리]를 클릭 후 해당 상품 GID를 조회해 주세요.</p></li><li local-id=\"96434239-6124-4ac2-bf15-3bb1a0125091\"><p local-id=\"6402a6da-fca0-403c-a572-7229ba94cdaf\">숙소 상품이 조회되면 클릭해 주세요.  </p></li></ul></td></tr><tr ac:local-id=\"381d804b-1249-46ac-b02b-b0e2d2f136d5\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"f6efe438-54c6-4474-be76-8a29b6f4fd77\"><p local-id=\"1d8658b4-aa6d-4830-9e29-fdd5a36669a5\" style=\"text-align: center;\"><strong>11</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"8c7b0285-9e64-4dfb-9632-42cdfbec86c5\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"212\" ac:original-width=\"836\" ac:custom-width=\"true\" ac:local-id=\"e2674be9-6e49-4df5-82ab-205b31bf4c3f\" ac:alt=\"image-20251212-072151.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-072151.png\" ri:version-at-save=\"1\" /></ac:image><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"361\" ac:original-width=\"1615\" ac:custom-width=\"true\" ac:local-id=\"4f15908d-0588-4bb6-bb9b-1b5e5c1d2405\" ac:alt=\"image-20251212-072345.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-072345.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"a8ebc5e3-62e4-40b9-a6cf-7c5a0043d4f6\" /><p local-id=\"671936e9-b83b-43a5-87ec-132b1233efe3\" /></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"129b754a-be08-40d6-b47c-814f2cf552aa\"><h3 local-id=\"9fea494b-f0bc-4050-b576-61e5cdd4b321\"><strong>상품 개시하기</strong></h3><ul local-id=\"4b4b6e11-64c2-47a5-94ba-6bbd310130fd\"><li local-id=\"cde3b387-1363-4e1c-a29d-ea9325d03317\"><p local-id=\"739a1334-6d1e-41e8-9ca5-daa9e61f8e52\">예약 설정 &gt; 확정 대기 사용 상태를 사용으로 전환해 주세요.</p></li><li local-id=\"cd9f43bd-291c-4d60-ab68-0a814283cf32\"><p local-id=\"d22b3ff6-8ed1-4601-b41b-8e94e8c4d8cb\">[판매승인] 클릭하여 판매 개시해 주세요.</p></li></ul></td></tr><tr ac:local-id=\"07370ca4-cf74-4ecc-bb25-6d24e435a9af\"><td data-highlight-colour=\"#ffffff\" ac:local-id=\"c9cbff61-b10d-4de4-bd66-da2908240ab1\"><p local-id=\"08e7d2d3-3d5d-471b-bc89-42cdf1f091a4\" style=\"text-align: center;\"><strong>12</strong></p></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"b7d1f198-3f13-421b-b0a6-46a9806960b4\"><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"371\" ac:original-width=\"1267\" ac:custom-width=\"true\" ac:local-id=\"2e6e67d7-b32f-45a9-a622-33a983befa06\" ac:alt=\"image-20251212-072747.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-072747.png\" ri:version-at-save=\"1\" /></ac:image><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"471\" ac:original-width=\"1901\" ac:custom-width=\"true\" ac:local-id=\"53314de1-cdbf-465a-b35f-40b359b4667e\" ac:alt=\"image-20251212-072854.png\" ac:width=\"620\"><ri:attachment ri:filename=\"image-20251212-072854.png\" ri:version-at-save=\"1\" /></ac:image><ac:image ac:align=\"center\" ac:layout=\"center\" ac:original-height=\"807\" ac:original-width=\"549\" ac:custom-width=\"true\" ac:local-id=\"7eaf8f8f-ea14-472c-a96c-5c57780644a2\" ac:alt=\"image-20251212-073107.png\" ac:width=\"549\"><ri:attachment ri:filename=\"image-20251212-073107.png\" ri:version-at-save=\"1\" /></ac:image><p local-id=\"e702a9b1-2a21-4c91-8519-b90774fac4db\" /></td><td data-highlight-colour=\"#ffffff\" ac:local-id=\"bfef4a43-6d73-4e56-8e5b-1b7e60c9fe05\"><h3 local-id=\"fab235f0-e98a-4ea7-8c13-457c45ebbbca\"><strong>요금/재고 등록 </strong></h3><ul local-id=\"900a94e8-9429-4643-8dea-f2bf059d025d\"><li local-id=\"57d3cbd8-3c99-46ee-a619-3d741750749c\"><p local-id=\"9eaff40c-05b8-4dc7-928f-5b27d8806411\">요금/재고관리 탭에서 해당 숙소 상품 [관리] 클릭해 주세요.</p></li><li local-id=\"5b3aba52-e444-4b87-a982-05a974ab3e95\"><p local-id=\"911d1144-5a2b-4ff7-a9cd-8881e1538cb7\">[재고 및 가격 일괄수정]을 클릭 후 각 객실별 재고 및 가격 설정 및 판매 상태 ON 처리해 주세요.</p></li><li local-id=\"e828324d-5a32-4390-a045-26164c2b80d7\"><p local-id=\"0f411eac-1c68-4298-9ad7-7b65340ae4c1\">기술서 요금/재고 정보 미기재되어 있을 경우 요금/재고 등록 스텝은 패스해 주세요.</p></li></ul></td></tr></tbody></table><p local-id=\"eadedbda-acd5-41d6-b162-eab72e4a7c6b\" />",
+      "representation": "storage",
+      "embeddedContent": [],
+      "_expandable": {
+        "content": "/rest/api/content/1050378392"
+      }
+    },
+    "_expandable": {
+      "editor": "",
+      "atlas_doc_format": "",
+      "view": "",
+      "export_view": "",
+      "styled_view": "",
+      "dynamic": "",
+      "editor2": "",
+      "anonymous_export_view": ""
+    }
+  },
+  "extensions": {
+    "position": 166059438
+  },
+  "_expandable": {
+    "childTypes": "",
+    "container": "/rest/api/space/AOG",
+    "schedulePublishInfo": "",
+    "metadata": "",
+    "operations": "",
+    "schedulePublishDate": "",
+    "children": "/rest/api/content/1050378392/child",
+    "restrictions": "/rest/api/content/1050378392/restriction/byOperation",
+    "history": "/rest/api/content/1050378392/history",
+    "ancestors": "",
+    "draftVersion": "",
+    "descendants": "/rest/api/content/1050378392/descendant"
+  },
+  "_links": {
+    "editui": "/pages/resumedraft.action?draftId=1050378392",
+    "webui": "/spaces/aoh/pages/1050378392",
+    "edituiv2": "/spaces/AOG/pages/edit-v2/1050378392",
+    "context": "/wiki",
+    "self": "https://mrtcx.atlassian.net/wiki/rest/api/content/1050378392",
+    "tinyui": "/x/mICbPg",
+    "collection": "/rest/api/content",
+    "base": "https://mrtcx.atlassian.net/wiki"
+  }
+}
